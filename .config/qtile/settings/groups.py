@@ -1,13 +1,17 @@
-from libqtile.config import Key, Group
-from libqtile.command import lazy
+from libqtile.config import Group, Key
+from libqtile.lazy import lazy
+
 from settings.keys import mod, keys
 
-group_names = ["TERM","WWW","CODE","DOC","ZOOM","WORK"]
+groups = [Group(i) for i in [
+    "", "", "", "", "", "", "", "", "",
+]]
 
-groups = [Group(name) for name in group_names]
-
-for i, (name) in enumerate(group_names, 1):
-    # Switch to another group
-    keys.append(Key([mod], str(i), lazy.group[name].toscreen()))
-    # Send current window to another group       
-    keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name)))
+for i, group in enumerate(groups):
+    actual_key = str(i + 1)
+    keys.extend([
+        # Switch to workspace N
+        Key([mod], actual_key, lazy.group[group.name].toscreen()),
+        # Send window to workspace N
+        Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
+    ])
