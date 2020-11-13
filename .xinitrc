@@ -50,6 +50,6 @@ fi
 
 ### Edit this lines ###
 nitrogen --restore &
-picom &
 setxkbmap -layout es &
+dunst &
 exec qtile
