@@ -1,23 +1,26 @@
 from libqtile import layout
 
-colors = [
-    "#FFFFFF", #white
-    "#000000", #black
-    "#9b9b9b", #grey
-    "#FF0000", #red
-    "#00FF00", #green
-    "#0000FF", #blue
-    ]
-
 layouts = [
     layout.MonadTall(
-        border_width = 3,
-        border_focus = colors[0],
-        margin = 12
-        ),
-    layout.Floating(
-        float_rules=[dict(wmclass="zoom")],
-        border_focus = colors[0],
-        margin = 12
-        )
-    ]
+        margin = 12,
+        border_focus = "#FFFFFF",
+    ),
+]
+
+floating_layout = layout.Floating(float_rules=[
+    # Run the utility of `xprop` to see the wm class and name of an X client.
+    {'wmclass': 'confirm'},
+    {'wmclass': 'dialog'},
+    {'wmclass': 'download'},
+    {'wmclass': 'error'},
+    {'wmclass': 'file_progress'},
+    {'wmclass': 'notification'},
+    {'wmclass': 'splash'},
+    {'wmclass': 'toolbar'},
+    {'wmclass': 'confirmreset'},  # gitk
+    {'wmclass': 'makebranch'},  # gitk
+    {'wmclass': 'maketag'},  # gitk
+    {'wname': 'branchdialog'},  # gitk
+    {'wname': 'pinentry'},  # GPG key password entry
+    {'wmclass': 'ssh-askpass'},  # ssh-askpass
+])
