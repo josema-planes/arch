@@ -2,8 +2,11 @@ from libqtile import layout
 
 layouts = [
     layout.MonadTall(
-        margin = 12,
+        margin = 6,
         border_focus = "#FFFFFF",
+    ),
+    layout.Max(
+        margin = 6,
     ),
 ]
 
