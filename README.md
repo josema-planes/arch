@@ -22,7 +22,7 @@ sudo pacman -S thunar nitrogen python dmenu brightnessctl git alsa-utils python-
 
 # Installing yay.
 ```
-git clone https://aur.archlinux.org/yay-git.git
+git clone https://aur.archlinux.org/yay.git
 
 cd yay
 
@@ -31,7 +31,7 @@ makepkg -si
 
 # Whith yay:
 ```
-yay -S visual-studio-code-bin nerd-fonts-ubuntu-mono ccat
+yay -S vscodium-bin nerd-fonts-ubuntu-mono ccat
 ```
 <br>
 <hr>
