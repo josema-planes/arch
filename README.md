@@ -1,6 +1,6 @@
 # dotfiles
 
-<img src="~/images/screen_shot1.jpg">
+<img src="https://repository-images.githubusercontent.com/308548067/5ae07280-275e-11eb-8a81-903fd8312f0c">
 
 # Base pakages:
 
