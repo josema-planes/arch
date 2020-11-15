@@ -1,17 +1,31 @@
-from libqtile.config import Group, Key
-from libqtile.lazy import lazy
+from libqtile import layout
 
-from settings.keys import mod, keys
+layouts = [
+    layout.Max(),
+    layout.MonadTall(
+        margin = 6,
+        border_focus = "#FFFFFF",
+    ),
+    layout.MonadWide(
+        margin = 6,
+        border_focus = "#FFFFFF",
+    ),
+]
 
-groups = [Group(i) for i in [
-    "", "", "", "", "", "", "", "", "",
-]]
-
-for i, group in enumerate(groups):
-    actual_key = str(i + 1)
-    keys.extend([
-        # Switch to workspace N
-        Key([mod], actual_key, lazy.group[group.name].toscreen()),
-        # Send window to workspace N
-        Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
-    ])
+floating_layout = layout.Floating(float_rules=[
+    # Run the utility of `xprop` to see the wm class and name of an X client.
+    {'wmclass': 'confirm'},
+    {'wmclass': 'dialog'},
+    {'wmclass': 'download'},
+    {'wmclass': 'error'},
+    {'wmclass': 'file_progress'},
+    {'wmclass': 'notification'},
+    {'wmclass': 'splash'},
+    {'wmclass': 'toolbar'},
+    {'wmclass': 'confirmreset'},  # gitk
+    {'wmclass': 'makebranch'},  # gitk
+    {'wmclass': 'maketag'},  # gitk
+    {'wname': 'branchdialog'},  # gitk
+    {'wname': 'pinentry'},  # GPG key password entry
+    {'wmclass': 'ssh-askpass'},  # ssh-askpass
+])
