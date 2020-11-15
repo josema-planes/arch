@@ -3,24 +3,34 @@ from libqtile.config import Screen
 
 widget_defaults = dict(
     font='UbuntuMono Nerd Font Bold',
-    fontsize=22,
+    fontsize=24,
     padding=4,
 )
 extension_defaults = widget_defaults.copy()
 
+# Functions
+def open_demenu(qtile):
+    qtile.cmd_spawn('nautilus')
+    qtile.cmd_spawn('firefox')
+
+def run_redshift(qtile):
+    qtile.cmd_spawn('/home/josema/scripts/redshift.sh')
+
+
+# Widgets
 screens = [
     Screen(
         top=bar.Bar(
             [
                 widget.GroupBox(
-                    fontsize = 40,
+                    fontsize = 45,
                     padding_y = 5,
                     padding = 10,
                     borderwidth = 3,
-                    active = "#AAAAAA",
+                    active = "#FFFFFF",
                     rounded = False,
-                    highlight_method = "line",
-                    this_current_screen_border = "#FF0000",
+                    highlight_method = "block",
+                    this_current_screen_border = "#AA4444",
                     disable_drag=True
                     ),
 
@@ -107,6 +117,16 @@ screens = [
                     background = "#a151d3",
                     foreground = "#000000",
                     ),
+
+                widget.TextBox(
+                    text = "1",
+                    mouse_callbacks = {'Button1': open_demenu},
+                ),
+                
+                widget.TextBox(
+                    text = "☽",
+                    mouse_callbacks = {'Button1': run_redshift},
+                ),
                 
                 widget.Systray(
                     icon_size = 24,
