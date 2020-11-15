@@ -31,3 +31,11 @@ makepkg -si
 ```
 yay -S visual-studio-code-bin nerd-fonts-ubuntu-mono ccat
 ```
+
+# Cange GTK theme:
+Download any theme in https://www.gnome-look.org/browse/cat/135/ord/rating/ and run:
+```
+cd Downloads/
+tar -xf THEME.tar.gz
+sudo mv THEME /usr/share/themes
+```
