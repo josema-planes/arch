@@ -10,8 +10,7 @@ extension_defaults = widget_defaults.copy()
 
 # Functions
 def open_demenu(qtile):
-    qtile.cmd_spawn('nautilus')
-    qtile.cmd_spawn('firefox')
+    qtile.cmd_spawn('dmenu_run')
 
 def run_redshift(qtile):
     qtile.cmd_spawn('/home/josema/scripts/redshift.sh')
@@ -23,8 +22,7 @@ screens = [
         top=bar.Bar(
             [
                 widget.GroupBox(
-                    fontsize = 45,
-                    padding_y = 5,
+                    fontsize = 35,
                     padding = 10,
                     borderwidth = 3,
                     active = "#FFFFFF",
@@ -119,12 +117,14 @@ screens = [
                     ),
 
                 widget.TextBox(
-                    text = "1",
+                    text = " ",
+                    fontsize = 16,
                     mouse_callbacks = {'Button1': open_demenu},
                 ),
                 
                 widget.TextBox(
                     text = "☽",
+                    fontsize = 18,
                     mouse_callbacks = {'Button1': run_redshift},
                 ),
                 
