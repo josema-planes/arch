@@ -37,6 +37,13 @@ yay -S visual-studio-code-bin nerd-fonts-ubuntu-mono ccat
 <hr>
 <br>
 
+# Solving screen tearing problem in firefox:
+Type <b>about:config</b> and set <b>layers.acceleration.force-enabled = true</b>
+
+<br>
+<hr>
+<br>
+
 # Changing GTK theme:
 Download any theme in https://www.gnome-look.org/browse/cat/135/ord/rating/ and run:
 ```
