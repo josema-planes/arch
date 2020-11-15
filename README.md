@@ -31,6 +31,7 @@ makepkg -si
 ```
 yay -S visual-studio-code-bin nerd-fonts-ubuntu-mono ccat
 ```
+<hr>
 
 # Cange GTK theme:
 Download any theme in https://www.gnome-look.org/browse/cat/135/ord/rating/ and run:
@@ -59,3 +60,37 @@ gtk-cursor-theme-name = CURSOR THEME
 Inherits=Breeze
 ```
 And reboot
+
+<hr>
+
+# Changing lightdm theme:
+Run:
+```
+sudo pacman -S lightdm-webkit2-greeter
+yay -S lightdm-webkit-theme-aether
+
+systemctl enable lightdm
+```
+And reboot
+
+# Changing GRUB theme
+Download <b>vimix</b> grub theme from https://www.gnome-look.org/browse/cat/109/ord/rating/ and run:
+```
+cd Downloads/
+tar -xf Vimix-1080p.tar.xz
+rm Vimix-1080p.tar.xz
+sudo mv Vimix-1080p /boot/grub/themes
+```
+Then edit <b>/etc/default/grub</b> by uncomment <b>GRUB_THEME</b> and add:
+```
+GRUB_THEME="/boot/grub/themes/Vimix-1080p/Vimix/theme.txt"
+```
+And applay changes:
+```
+sudo su
+grub-mkcongif -o /boot/grub/grub.cfg
+```
+If everything goes right then you'll see:
+```
+Found theme: /boot/grub/themes/Vimix-1080p/Vimix/theme.txt
+```
