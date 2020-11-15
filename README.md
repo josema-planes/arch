@@ -39,6 +39,13 @@ cd Downloads/
 tar -xf THEME.tar.gz
 sudo mv THEME /usr/share/themes
 ```
+Download the breeze cursor theme in https://www.gnome-look.org/p/999927/ and run:
+```
+cd Downloads/
+tar -xf 165371-Breeze.tar.gz
+rm 165371-Breeze.tar.gz
+sudo mv Breeze /usr/share/icons
+```
 Now edit ~/.config/gtk-3.0/settings.ini by adding these lines:
 ```
 [Settings]
