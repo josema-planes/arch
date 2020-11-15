@@ -1,13 +1,10 @@
-# compositor
-picom &
-
 # spanish keymap
 setxkbmap -layout es &
 
 # wallpaper
 nitrogen --restore &
 
-# notification
+# notification system
 dunst &
 
 # scripts
@@ -19,3 +16,5 @@ cbatticon -u 5 &    # battery
 nm-applet &         # wifi
 
 volumeicon &        # volume
+
+udiskie -t &        # external drives
