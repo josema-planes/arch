@@ -46,15 +46,15 @@ tar -xf 165371-Breeze.tar.gz
 rm 165371-Breeze.tar.gz
 sudo mv Breeze /usr/share/icons
 ```
-Now edit ~/.config/gtk-3.0/settings.ini by adding these lines:
+Now edit ~/.config/gtk-3.0/settings.ini and /usr/share/icons/default/index.theme by adding these lines:
 ```
+# ~/.config/gtk-3.0/settings.ini
 [Settings]
 gtk-icon-theme-name = ICON THEME
 gtk-theme-name = THEME
 gtk-cursor-theme-name = CURSOR THEME
-```
-And edit /usr/share/icons/default/index.theme:
-```
+
+# /usr/share/icons/default/index.theme
 [Icon Theme]
 Inherits=Breeze
 ```
