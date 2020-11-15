@@ -15,7 +15,7 @@ Then start qtile and copy the rest.
 
 # Rest of pakages:
 ```
-nautilus nitrogen python dmenu brightnessctl git alsa-utils python-psutil acpi dunst exa unzip volumeicon cbatticon network-manager-applet
+sudo pacman -S nautilus nitrogen python dmenu brightnessctl git alsa-utils python-psutil acpi dunst exa unzip volumeicon cbatticon network-manager-applet
 ```
 
 # Whith yay:
