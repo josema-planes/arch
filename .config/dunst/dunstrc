@@ -54,7 +54,7 @@
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = center
+    alignment = left
 
     # Vertical alignment of message text and icon.
     # Possible values are "top", "center" and "bottom".
@@ -103,19 +103,14 @@
 
     ### History ###
 
-    # Should a notification popped up from history be sticky or timeout
-    # as if it would normally do.
     sticky_history = yes
 
-    # Maximum amount of notifications kept in history
     history_length = 20
 
     ### Misc/Advanced ###
 
-    # dmenu path.
     dmenu = /usr/bin/dmenu -p dunst:
 
-    # Browser for opening urls in context menu.
     browser = /usr/bin/firefox -new-tab
 
     always_run_script = true
@@ -128,17 +123,8 @@
 
     verbosity = mesg
 
-    # Define the corner radius of the notification window
-    # in pixel size. If the radius is 0, you have no rounded
-    # corners.
-    # The radius will be automatically lowered if it exceeds half of the
-    # notification height to avoid clipping text and/or icons.
     corner_radius = 5
 
-    # Ignore the dbus closeNotification message.
-    # Useful to enforce the timeout set by dunst configuration. Without this
-    # parameter, an application may close the notification sent before the 
-    # user defined timeout.
     ignore_dbusclose = false
 
     ### Legacy
@@ -164,24 +150,13 @@
 
 [shortcuts]
 
-    # Shortcuts are specified as [modifier+][modifier+]...key
     # Available modifiers are "ctrl", "mod1" (the alt-key), "mod2",
     # "mod3" and "mod4" (windows-key).
-    # Xev might be helpful to find names for keys.
 
-    # Close notification.
     close = ctrl+space
 
-    # Close all notifications.
     close_all = ctrl+mod4+space
 
-    # Redisplay last message(s).
-    # On the US keyboard layout "grave" is normally above TAB and left
-    # of "1". Make sure this key actually exists on your keyboard layout,
-    # e.g. check output of 'xmodmap -pke'
-    # history = ctrl+shift+space
-
-    # Context menu.
     context = ctrl+shift+period
 
 [urgency_low]
