@@ -21,7 +21,7 @@ keys = [
     Key([mod], "m", lazy.spawn("firefox")),
     Key([mod], "c", lazy.spawn("code")),
     Key([mod], "d", lazy.spawn("dmenu_run")),
-    Key([mod], "n", lazy.spawn("nautilus")),
+    Key([mod], "n", lazy.spawn("thunar")),
     Key([mod], "v", lazy.spawn("virtualbox")),
     Key([mod], "l", lazy.spawn("libreoffice")),
 
