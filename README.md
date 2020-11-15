@@ -1,5 +1,7 @@
 # dotfiles
 
+<img src="~/images/screen_shot1.jpg">
+
 # Base pakages:
 
 ```
