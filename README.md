@@ -39,3 +39,11 @@ cd Downloads/
 tar -xf THEME.tar.gz
 sudo mv THEME /usr/share/themes
 ```
+Now edit ~/.config/gtk-3.0/settings.ini by adding these lines:
+```
+[Settings]
+gtk-icon-theme-name = ICON THEME
+gtk-theme-name = THEME
+gtk-cursor-theme-name = CURSOR THEME
+```
+And reboot
