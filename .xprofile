@@ -1,7 +1,7 @@
 # compositor
 picom &
 
-# espanish keymap
+# spanish keymap
 setxkbmap -layout es &
 
 # wallpaper
