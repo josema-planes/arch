@@ -53,4 +53,9 @@ gtk-icon-theme-name = ICON THEME
 gtk-theme-name = THEME
 gtk-cursor-theme-name = CURSOR THEME
 ```
+And edit /usr/share/icons/default/index.theme:
+```
+[Icon Theme]
+Inherits=Breeze
+```
 And reboot
