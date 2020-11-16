@@ -1,15 +1,21 @@
 from libqtile import layout
+from settings.colors import colors
 
 layouts = [
-    layout.Max(
+    layout.MonadWide(
         margin = 6,
+        border_focus = colors[4],
+        borderwidth = 1,
     ),
     layout.MonadTall(
         margin = 6,
-        border_focus = "#FFFFFF",
+        border_focus = colors[4],
+        borderwidth = 1,
     ),
-    layout.MonadWide(
+    layout.Max(
         margin = 6,
-        border_focus = "#FFFFFF",
     ),
+    layout.Floating(),
 ]
+
+# floating_layout = layout.Floating(float_rules=[])
