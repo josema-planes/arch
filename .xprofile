@@ -1,6 +1,9 @@
 # spanish keymap
 setxkbmap -layout es &
 
+# Composer
+picom &
+
 # wallpaper
 nitrogen --restore &
 
