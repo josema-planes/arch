@@ -17,7 +17,7 @@ Then start qtile and copy the rest.
 
 # Rest of pakages:
 ```
-sudo pacman -S thunar nitrogen python dmenu brightnessctl git alsa-utils python-psutil acpi dunst exa unzip volumeicon cbatticon network-manager-applet udiskie ntfs-3g glib2 gvfs geeqie libreoffice nvidia nvidia-utils xf86-video-intel xcb-util-cursor scrot redshift
+sudo pacman -S thunar nitrogen python dmenu picom brightnessctl git alsa-utils python-psutil acpi dunst exa unzip volumeicon cbatticon network-manager-applet udiskie ntfs-3g glib2 gvfs geeqie libreoffice nvidia nvidia-utils xf86-video-intel xcb-util-cursor scrot redshift
 ```
 
 # Installing yay.
