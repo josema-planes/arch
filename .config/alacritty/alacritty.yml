@@ -1,29 +1,34 @@
 background_opacity: 0.85
 
 colors:
-  bright:
-    black: '0x282a40'
-    blue: '0xa3c5ff'
-    cyan: '0x98fffd'
-    green: '0xe0ffad'
-    magenta: '0xd6afed'
-    red: '0xeb7f84'
-    white: '0xd1e5ed'
-    yellow: '0xffee7e'
-
-  normal:
-    black: '0x181a29'
-    blue: '0x93bbff'
-    cyan: '0x98e4ff'
-    green: '0xcdea9f'
-    magenta: '0xd3a7ee'
-    red: '0xF07178'
-    white: '0xbfd5de'
-    yellow: '0xffd47e'
-
+  # Default colors
   primary:
-    background: '0x0f101a'
-    foreground: '0xc5c9de'
+    background: '0x1e2127'
+    foreground: '0xffffff'
+
+    bright_foreground: '0xe6efff'
+
+  # Normal colors
+  normal:
+    black:   '0x1e2127'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0x828791'
+
+  # Bright colors
+  bright:
+    black:   '0x5c6370'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xe6efff'
 
 font:
   bold:
@@ -41,6 +46,10 @@ window:
     columns: 60
     lines: 15
 
+  position:  
+    x: 750
+    y: 150
+  
   padding:
     x: 6
     y: 6
