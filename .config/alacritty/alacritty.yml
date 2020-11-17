@@ -33,12 +33,23 @@ font:
   normal:
     family: UbuntuMono Nerd Font
     style: Regular
-  size: 18
+  size: 16
 
 window:
+
+  dimensions:
+    columns: 60
+    lines: 15
+
   padding:
     x: 6
     y: 6
+
+  title: Alacritty
+
+cursor:
+  style: Beam
+
 
 mouse_bindings:
   - { mouse: Right, action: PasteSelection } # Paste with right click
