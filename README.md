@@ -2,6 +2,10 @@
 
 <img src="https://github.com/josemapt/dotfiles/blob/main/screenshots/qtile.jpg">
 
+***Quick Links***
+- *Window manager configs*
+  - [Qtile](https://github.com/josemapt/dotfiles/tree/main/.config/qtile)
+
 # Base pakages:
 
 ```
