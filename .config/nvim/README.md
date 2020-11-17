@@ -1,6 +1,6 @@
 # NeoVim
 
-<img src="https://github.com/josemapt/dotfiles/blob/main/screenshots/nvim.jpg>
+<img src="https://github.com/josemapt/dotfiles/blob/main/screenshots/nvim.jpg">
 
 Run this to enable plug-ins:
 ```
