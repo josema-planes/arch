@@ -64,7 +64,7 @@ Now edit <b>~/.config/gtk-3.0/settings.ini</b> and <b>/usr/share/icons/default/i
 [Settings]
 gtk-icon-theme-name = ICON THEME
 gtk-theme-name = THEME
-gtk-cursor-theme-name = CURSOR THEME
+gtk-cursor-theme-name = Breeze
 
 # /usr/share/icons/default/index.theme
 [Icon Theme]
