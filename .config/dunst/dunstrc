@@ -96,7 +96,7 @@
     min_icon_size = 0
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 32
+    max_icon_size = 35
 
     # Paths to default icons.
     icon_path = /home/josema/images/info.png

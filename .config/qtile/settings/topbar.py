@@ -1,7 +1,7 @@
 from libqtile import bar, layout, widget
 from libqtile.config import Screen
 
-from settings.colors import colors
+from settings.theme import colors
 
 widget_defaults = dict(
     font='UbuntuMono Nerd Font Bold',

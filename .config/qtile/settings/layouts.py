@@ -1,5 +1,5 @@
 from libqtile import layout
-from settings.colors import colors
+from settings.theme import colors
 
 layout_style = {
     'margin': 8,
@@ -51,6 +51,9 @@ floating_layout = layout.Floating(
         {"wmclass": 'ssh-askpass'},
         {"wmclass": "Mlconfig"},
         {"wmclass": "Alacritty"},
+        {"wmclass": "Settings"},
+        {"wmclass": "Xephyr"},
+        {"wmclass": "Qtile_theme"},
         {"wmclass": "Zoom"},
     ],
     border_focus = colors["active"]
