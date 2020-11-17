@@ -1,13 +1,11 @@
-from os import path
-import re
-import socket
 import subprocess
+from os import path
 from libqtile import hook
 
 from settings.keys import keys, mod
 from settings.groups import groups
 from settings.topbar import screens, widget_defaults, extension_defaults
-from settings.layouts import layouts
+from settings.layouts import layouts, floating_layout
 from settings.path import qtile_path
 
 @hook.subscribe.startup_once
