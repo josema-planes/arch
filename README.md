@@ -1,6 +1,6 @@
 # dotfiles
 
-<img src="https://repository-images.githubusercontent.com/308548067/5ae07280-275e-11eb-8a81-903fd8312f0c">
+<img src="https://repository-images.githubusercontent.com/308548067/62169600-28ae-11eb-88c1-21b521997ec2">
 
 # Base pakages:
 
