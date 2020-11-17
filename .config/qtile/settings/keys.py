@@ -24,6 +24,7 @@ keys = [
     Key([mod], "n", lazy.spawn("thunar")),
     Key([mod], "v", lazy.spawn("virtualbox")),
     Key([mod], "l", lazy.spawn("libreoffice")),
+    
 
     # Volume
     Key([], "XF86AudioLowerVolume", lazy.spawn("/home/josema/scripts/volume.sh down")),

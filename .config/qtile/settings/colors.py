@@ -1,15 +1,12 @@
-colors = [
-    # 0 Powerlines------
-    "#a151d3",  # Purple
-    "#F07178",  # Orange
-    "#fb9f7f",  # Yellow / orange
-    "#ffd47e",  # Yellow
+colors = {
+    "bg": "#292d3e",
 
-    # 4 Groupbox--------
-    "#f1ffff",  # Active
-    "#4c566a",  # Inactive
-    "#ff5555",  # Current goup
+    "active": "#f1ffff",
+    "inactive": "#4c566a",
+    "focus": "#ff5555",
 
-    # 7 Satus_bar-------
-    "#292d3e",  # Background
-]
+    "color1": "#a151d3",
+    "color2": "#f07178",
+    "color3": "#fb9f7f",
+    "color4": "#ffd47e",
+}
