@@ -1,6 +1,6 @@
 # dotfiles
 
-<img src="https://repository-images.githubusercontent.com/308548067/62169600-28ae-11eb-88c1-21b521997ec2">
+<img src="https://github.com/josemapt/dotfiles/blob/main/screenshots/qtile.jpg">
 
 # Base pakages:
 
