@@ -12,6 +12,8 @@ keys = [
     Key([mod, "shift"], "q", lazy.window.kill()), # Kill actual window
 
     Key([mod, "shift"], "r", lazy.restart()), # Restart qtile
+    
+    Key([mod, "shift"], "Escape", lazy.shutdown()), # Log off qtile
 
     Key([mod], "r", lazy.spawncmd()), # Open promp in bar
     #------------------------------------------------------
