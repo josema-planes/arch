@@ -1,13 +1,49 @@
-#! /usr/bin/python
+#!/usr/bin/env python
 
-from tkinter import messagebox
-import subprocess
+import os
+from tkinter import *
+from tkinter import ttk
 
-def shutdown():
-    MsgBox = messagebox.askquestion('Shutdown','Shutdown now?',icon = 'warning')
-    if MsgBox == 'yes':
-        subprocess.call("/home/josema/scripts/shutdown.sh")
-    else:
-        exit
 
-shutdown()
+class app:
+    def __init__(self, root):
+
+        # Theme-------
+        s=ttk.Style()
+        s.theme_use('clam')
+        s.configure("TButton", font=("UbuntuMono Nerd Font Bold", 12), width = 25)
+        s.map('TButton', background=[('active','grey')])
+        # ------------
+
+        self.rt = root
+        self.rt.title("Shutdown")
+        self.rt.geometry("+1670+905")
+        self.rt.configure(bg="white")
+
+        frame = Frame(root, bg="white")
+        frame.pack(pady=5,padx=5)
+
+        self.reboot = ttk.Button(frame, text="Reboot",command=self._reboot, style="TButton")
+        self.reboot.grid(row=0, column=0)
+
+        self.shutdown = ttk.Button(frame, text="Shutdown",command=self._shutdown,style="TButton")
+        self.shutdown.grid(row=1, column=0)
+
+        ttk.Separator(frame).grid(row=2,column=0,pady=5,padx=5,sticky="ew")
+
+        ttk.Button(frame, text="Exit",command=self._exit,style="TButton").grid(row=3, column=0)
+    
+    def _reboot(self):
+        os.system("reboot")
+    
+    def _shutdown(self):
+        os.system("shutdown now")
+    
+    def _exit(self):
+        root.destroy()
+
+
+if __name__ == "__main__":
+    root = Tk()
+    program = app(root)
+    root.mainloop()
