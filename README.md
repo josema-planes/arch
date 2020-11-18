@@ -20,7 +20,7 @@ Then start qtile and copy the rest.
 
 # Rest of pakages:
 ```
-sudo pacman -S thunar nitrogen python dmenu picom brightnessctl git alsa-utils python-psutil acpi dunst exa unzip volumeicon cbatticon network-manager-applet udiskie ntfs-3g glib2 gvfs geeqie libreoffice tk xf86-video-intel xcb-util-cursor scrot redshift
+sudo pacman -S thunar nitrogen python dmenu picom brightnessctl git alsa-utils python-psutil acpi dunst exa unzip volumeicon cbatticon network-manager-applet udiskie ntfs-3g glib2 gvfs geeqie libreoffice tk xf86-video-intel xcb-util-cursor scrot redshift xdotools
 ```
 
 # Installing yay.
@@ -36,6 +36,13 @@ makepkg -si
 ```
 yay -S vscodium-bin nerd-fonts-ubuntu-mono ccat
 ```
+
+# Finally set execution permission to this scripts:
+```
+chmod +x 
+```
+
+
 <br>
 <hr>
 <br>
