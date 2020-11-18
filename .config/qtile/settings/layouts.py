@@ -23,6 +23,7 @@ floating_layout = layout.Floating(
         {"role": "pop-up"},
         {"role": "prefwindow"},
         {"role": "task_dialog"},
+
         {"wname": "Module"},
         {"wname": "Search Dialog"},
         {"wname": "Goto"},
@@ -33,6 +34,11 @@ floating_layout = layout.Floating(
         {"wname": 'branchdialog'},
         {"wname": 'pinentry'},
         {"wname": 'confirm'},
+        {"wname": 'Zoom'},
+        {"wname": "Shutdown"},
+        {"wname": "Qtile_theme"},
+        {"wname": "settings"},
+
         {"wmclass": 'dialog'},
         {"wmclass": 'download'},
         {"wmclass": 'error'},
@@ -53,7 +59,7 @@ floating_layout = layout.Floating(
         {"wmclass": "Alacritty"},
         {"wmclass": "Settings"},
         {"wmclass": "Xephyr"},
-        {"wmclass": "Qtile_theme"},
+        {"wmclass": "Geeqie"},
         {"wmclass": "Zoom"},
     ],
     border_focus = colors["active"]

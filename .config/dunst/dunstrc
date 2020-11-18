@@ -34,7 +34,7 @@
 
     ### Text ###
 
-    font = UbuntuMono Nerd Font 24
+    font = sans 24
 
     line_height = 0
 
