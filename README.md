@@ -40,7 +40,9 @@ yay -S vscodium-bin nerd-fonts-ubuntu-mono ccat
 # Clone repository:
 ```
 git clone https://github.com/josemapt/dotfiles.git
+
 ```
+And move files
 
 # Finally set execution permission to this scripts:
 ```
@@ -48,7 +50,6 @@ chmod +x scripts/*.sh
 chmod +x scripts/*.py
 chmod +x .config/qtile/autostart.sh
 ```
-
 
 <br>
 <hr>
