@@ -39,8 +39,9 @@ yay -S vscodium-bin nerd-fonts-ubuntu-mono ccat
 
 # Finally set execution permission to this scripts:
 ```
-chmod +x *.sh
-chmod +x *.py
+chmod +x scripts/*.sh
+chmod +x scripts/*.py
+chmod +x .config/qtile/autostart.sh
 ```
 
 
