@@ -37,7 +37,10 @@ makepkg -si
 yay -S vscodium-bin nerd-fonts-ubuntu-mono ccat
 ```
 
-# Clone 
+# Clone repository:
+```
+git clone https://github.com/josemapt/dotfiles.git
+```
 
 # Finally set execution permission to this scripts:
 ```
