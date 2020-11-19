@@ -39,7 +39,8 @@ yay -S vscodium-bin nerd-fonts-ubuntu-mono ccat
 
 # Finally set execution permission to this scripts:
 ```
-chmod +x 
+chmod +x *.sh
+chmod +x *.py
 ```
 
 
