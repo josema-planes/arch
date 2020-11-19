@@ -46,8 +46,7 @@ And move files
 
 # Finally set execution permission to this scripts:
 ```
-chmod +x scripts/*.sh
-chmod +x scripts/*.py
+chmod +x scripts/*
 chmod +x .config/qtile/autostart.sh
 ```
 
