@@ -37,6 +37,8 @@ makepkg -si
 yay -S vscodium-bin nerd-fonts-ubuntu-mono ccat
 ```
 
+# Clone 
+
 # Finally set execution permission to this scripts:
 ```
 chmod +x scripts/*.sh
