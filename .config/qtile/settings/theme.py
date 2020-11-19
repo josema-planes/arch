@@ -6,21 +6,18 @@ from settings.path import qtile_path
 
 
 def load_theme():
-    # Default theme
-    theme = "material-ocean"
-
     # If file exist load it
     try:
         config_file = path.join(qtile_path, "config.json")
         if path.isfile(config_file):
             with open(config_file) as f:
-                theme = json.load(f)["theme"]
+                myTheme = json.load(f)["theme"]
 
-        theme_path = path.join(qtile_path, "themes", f"{theme}.json")
+        theme_path = path.join(qtile_path, "themes", f"{myTheme}.json")
 
         with open(theme_path) as f:
 
-            if (theme != "material-ocean"):
+            if(myTheme != "material-ocean"):
                 os.system("notify-send 'Theme has changed'")
             
             return json.load(f)

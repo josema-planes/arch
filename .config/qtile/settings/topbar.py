@@ -22,7 +22,7 @@ def shutdown(qtile):
     qtile.cmd_spawn('/home/josema/scripts/shutdown.py')
 
 def settings(qtile):
-    qtile.cmd_spawn('/home/josema/settings/settings.py')
+    qtile.cmd_spawn('/home/josema/scripts/settings.py')
 
 
 def reload_qtile(qtile):
