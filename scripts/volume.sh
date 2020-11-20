@@ -10,10 +10,11 @@ function get_volume {
 
 function send_notification {
     volume=`get_volume`
+    fvolume="${volume:0:2}"
     # Make the bar with the special character ─ (it's not dash -)
-    bar=$(seq -s "─" $(($volume / 5)) | sed 's/[0-9]//g')
+    bar=$(seq -s "─" $(($fvolume / 5)) | sed 's/[0-9]//g')
     # Send the notification
-    dunstify -r 2593 -u normal "  $bar  ""$volume"
+    dunstify -r 2593 -u normal "  $bar  ""$fvolume"
 }
 
 case $1 in

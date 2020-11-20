@@ -215,14 +215,14 @@ class Icons(Frame):
         f = open(config_file, "r")
         lineas = f.readlines()
 
-        th = lineas[1].replace("gtk-icon-theme-name = ", "")
-        ic = lineas[2].replace("gtk-theme-name = ", "")
-        cu = lineas[3].replace("gtk-cursor-theme-name = ", "")
+        ic = lineas[1].replace("gtk-icon-theme-name=", "")
+        th = lineas[2].replace("gtk-theme-name=", "")
+        cu = lineas[3].replace("gtk-cursor-theme-name=", "")
 
         f.close()
 
-        ttk.Label(self, text="Global theme:", style="TLabel").grid(row=0,column=0,padx=10,pady=20,sticky="w")
-        ttk.Label(self, text="Icon theme:", style="TLabel").grid(row=1,column=0,padx=10,sticky="w")
+        ttk.Label(self, text="Icon theme:", style="TLabel").grid(row=0,column=0,padx=10,pady=20,sticky="w")
+        ttk.Label(self, text="Global theme:", style="TLabel").grid(row=1,column=0,padx=10,sticky="w")
         ttk.Label(self, text="Cursor theme:", style="TLabel").grid(row=2,column=0,padx=10,pady=20,sticky="w")
 
         # Gobal theme---------------------------------------
@@ -282,9 +282,9 @@ class Volume(Frame):
     
     def get_volume(self):
         vol = subprocess.run(["amixer","get","Master"], capture_output=True, text=True)
-        e = vol.stdout.replace("\n", "").replace("Simple mixer control 'Master',0  Capabilities: pvolume pvolume-joined pswitch pswitch-joined  Playback channels: Mono  Limits: Playback 0 - 87  Mono: Playback ", "")
+        e = vol.stdout
 
-        finalvol = e.split()[1].replace("[", "").replace("%]", "")
+        finalvol = e.split()[25].replace("[", "").replace("%]", "")
 
         self.e.set(int(finalvol))
     

@@ -23,16 +23,19 @@ class app:
         frame = Frame(root, bg="white")
         frame.pack(pady=5,padx=5)
 
-        self.reboot = ttk.Button(frame, text="Reboot",command=self._reboot, style="TButton")
-        self.reboot.grid(row=0, column=0)
+        ttk.Button(frame, text="Log out",command=self._logout, style="TButton").grid(row=0, column=0)
 
-        self.shutdown = ttk.Button(frame, text="Shutdown",command=self._shutdown,style="TButton")
-        self.shutdown.grid(row=1, column=0)
+        ttk.Button(frame, text="Reboot",command=self._reboot, style="TButton").grid(row=1, column=0)
 
-        ttk.Separator(frame).grid(row=2,column=0,pady=5,padx=5,sticky="ew")
+        ttk.Button(frame, text="Shutdown",command=self._shutdown,style="TButton").grid(row=2, column=0)
 
-        ttk.Button(frame, text="Exit",command=self._exit,style="TButton").grid(row=3, column=0)
+        ttk.Separator(frame).grid(row=3,column=0,pady=5,padx=5,sticky="ew")
+
+        ttk.Button(frame, text="Exit",command=self._exit,style="TButton").grid(row=4, column=0)
     
+    def _logout(self):
+        os.system("xdotool key Super_L+Shift+Escape")
+
     def _reboot(self):
         os.system("reboot")
     
