@@ -60,7 +60,9 @@ floating_layout = layout.Floating(
         {"wmclass": "Settings"},
         {"wmclass": "Xephyr"},
         {"wmclass": "Geeqie"},
+        {"wmclass": "zoom"},
         {"wmclass": "Zoom"},
+        {"wmclass": "Zoom - Free acount"},
     ],
     border_focus = colors["active"]
 )
