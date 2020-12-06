@@ -24,7 +24,7 @@ sudo pacman -S thunar nitrogen python picom dunst exa unzip udiskie ntfs-3g glib
 ```
 ================================
 ```
-sudo pacman -S git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie
+sudo pacman -S git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie xcb-util-cursor
 
 ```
 
