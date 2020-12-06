@@ -20,7 +20,7 @@ Then start qtile and copy the rest.
 
 # Rest of pakages:
 ```
-sudo pacman -S thunar nitrogen python picom dunst exa unzip udiskie ntfs-3g glib2 gvfs libreoffice xf86-video-intel xcb-util-cursor scrot redshift xdotool evince htop
+sudo pacman -S python picom dunst exa unzip udiskie ntfs-3g glib2 gvfs scrot redshift xdotool evince htop
 ```
 ================================
 ```
