@@ -24,7 +24,7 @@ sudo pacman -S picom unzip xdotool evince htop
 ```
 ================================
 ```
-sudo pacman -S git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie xcb-util-cursor xf86-video-intel exa gvfs ntfs-3g dunst scrot redshift bc
+sudo pacman -S git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie xcb-util-cursor xf86-video-intel xf86-video-nouveau exa gvfs ntfs-3g dunst scrot redshift bc
 ```
 
 # Installing yay.
