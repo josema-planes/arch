@@ -24,7 +24,7 @@ sudo pacman -S picom dunst unzip scrot redshift xdotool evince htop
 ```
 ================================
 ```
-sudo pacman -S git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie xcb-util-cursor xf86-video-intel exa gvfs udiskie ntfs-3g
+sudo pacman -S git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie xcb-util-cursor xf86-video-intel exa gvfs udiskie ntfs-3g libnotify notification-daemon
 
 ```
 
