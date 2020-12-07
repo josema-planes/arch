@@ -1,10 +1,12 @@
+export PATH=$HOME/.local/bin:$PATH
+
 # spanish keymap
-setxkbmap -layout es &
+setxkbmap es&
 
 # wallpaper
 nitrogen --restore &
 
-# notification system
+# notifications
 dunst &
 
 # scripts
