@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # You can call this script like this:
-# $./volume.sh up
-# $./volume.sh down
-# $./volume.sh toggle
+# $./brightnes.sh up
+# $./brightnes.sh down
 
 function getProgressString {
     ITEMS="$1" # The total number of items(the width of the bar)
