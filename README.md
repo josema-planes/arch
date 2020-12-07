@@ -20,12 +20,11 @@ Then start qtile and copy the rest.
 
 # Rest of pakages:
 ```
-sudo pacman -S picom dunst unzip scrot redshift xdotool evince htop
+sudo pacman -S picom unzip xdotool evince htop
 ```
 ================================
 ```
-sudo pacman -S git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie xcb-util-cursor xf86-video-intel exa gvfs ntfs-3g
-
+sudo pacman -S git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie xcb-util-cursor xf86-video-intel exa gvfs ntfs-3g dunst scrot redshift
 ```
 
 # Installing yay.
