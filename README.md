@@ -29,8 +29,8 @@ sudo pacman -S git brightnessctl python-psutil acpi alsa-utils volumeicon cbatti
 ```
 to enable notifications:
 ```
-# Create this file with nano or vim
-sudo nano /usr/share/dbus-1/services/org.freedesktop.Notifications.service
+# Create this file
+sudo nvim /usr/share/dbus-1/services/org.freedesktop.Notifications.service
 # Paste these lines
 [D-BUS Service]
 Name=org.freedesktop.Notifications
