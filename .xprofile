@@ -1,9 +1,6 @@
 # spanish keymap
 setxkbmap -layout es &
 
-# Composer
-picom &
-
 # wallpaper
 nitrogen --restore &
 
@@ -12,3 +9,7 @@ dunst &
 
 # scripts
 /home/josema/scripts/battery.sh &
+
+# touchpad settings
+xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1 &
+xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1 &
