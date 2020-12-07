@@ -3,6 +3,23 @@
 # You can call this script like this:
 # $./volume.sh up
 # $./volume.sh down
+# $./volume.sh toggle
+
+function getProgressString {
+    ITEMS="$1" # The total number of items(the width of the bar)
+    FILLED_ITEM="$2" # The look of a filled item 
+    NOT_FILLED_ITEM="$3" # The look of a not filled item
+    STATUS="$4" # The current progress status in percent
+
+    # calculate how many items need to be filled and not filled
+    FILLED_ITEMS=$(echo "((${ITEMS} * ${STATUS})/100 + 0.5) / 1" | bc)
+    NOT_FILLED_ITEMS=$(echo "$ITEMS - $FILLED_ITEMS" | bc)
+
+    # Assemble the bar string
+    msg=$(printf "%${FILLED_ITEMS}s" | sed "s| |${FILLED_ITEM}|g")
+    msg=${msg}$(printf "%${NOT_FILLED_ITEMS}s" | sed "s| |${NOT_FILLED_ITEM}|g")
+    echo "$msg"
+}
 
 function get_volume {
     amixer get Master | grep -o [0-9]*% | cut -d '%' -f 1
@@ -10,22 +27,38 @@ function get_volume {
 
 function send_notification {
     volume=`get_volume`
-    fvolume="${volume:0:2}"
+    mute="$(amixer -c 0 get Master | tail -1 | awk '{print $6}' | sed 's/[^a-z]*//g')"
+
     # Make the bar with the special character ─ (it's not dash -)
-    bar=$(seq -s "─" $(($fvolume / 5)) | sed 's/[0-9]//g')
-    # Send the notification
-    dunstify -r 2593 -u normal "  $bar  ""$fvolume"
+    
+
+    if [[ $volume == 0 || "$mute" == "off" ]]; then
+        # Show the sound muted notification
+        dunstify -r 2593 -a "changeVolume" -u low "Volume muted" 
+    else
+        # Show the volume notification
+        dunstify -r 2593 -a "changeVolume" -u low \
+        "Volume: ${volume}%" "$(getProgressString 10 "<b>─</b>" "─" $volume)"
+    fi
+
+    # Play the volume changed sound
+    canberra-gtk-play -i audio-volume-change -d "changeVolume"
 }
 
 case $1 in
     up)
 	# Increases volume (+ 5%)
-	amixer set Master 5%+
+	amixer set Master 5%+ > /dev/null
 	send_notification
 	;;
     down)
     # Decreases volume (- 5%)
-	amixer set Master 5%-
+	amixer set Master 5%- > /dev/null
+	send_notification
+	;;
+    toggle)
+    # Mute/unmute
+	amixer set Master toggle > /dev/null
 	send_notification
 	;;
 esac
