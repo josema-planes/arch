@@ -48,12 +48,6 @@ git clone https://github.com/josemapt/dotfiles.git
 ```
 And move files
 
-# Finally set execution permission to this scripts:
-```
-chmod +x scripts/*
-chmod +x localApps/*
-chmod +x .config/qtile/autostart.sh
-```
 
 <br>
 <hr>
