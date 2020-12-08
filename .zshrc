@@ -1,3 +1,8 @@
+# autostart when log-in
+if [[ "$(tty)" = "/dev/tty1" ]]; then
+    pgrep qtile || startx
+fi
+
 # Enable colors
 autoload -U colors && colors
 
@@ -8,15 +13,18 @@ zstyle ':completion:*' menu select
 _comp_options+=(globdots)
 
 # Enable history
-HISTSIZE=500
-SAVEHIST=500
+HISTSIZE=5000
+SAVEHIST=5000
 HISTFILE=~/.zsh_history
 
 # prompt
-PS1="%F{magenta}(%~) %F{blue}%n %F{white}$%f "
+PS1="[%F{magenta}(%~) %F{blue}%n%f ] %(?.%F{green}.%F{red})%f "
 
-# load all data from /home/josema/.zsh_config
-for f in /home/josema/.zsh_config/*; do source $f; done
+# highlight config
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)       # enables main and brackets highlight
 
-# source for zsh syntax highlighting (this must be the last one)
-source /home/josema/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Sources -------------------------------------------------------------
+for f in /home/josema/.zsh_config/*; do source $f; done         # load all data from /home/josema/.zsh_config
+
+source ~/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/josema/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh     # this must be the last one
