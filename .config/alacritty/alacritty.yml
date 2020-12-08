@@ -41,23 +41,12 @@ font:
   size: 16
 
 window:
-
-  dimensions:
-    columns: 60
-    lines: 15
-
-  position:  
-    x: 750
-    y: 150
-  
+ 
   padding:
     x: 6
     y: 6
 
   title: Alacritty
-
-cursor:
-  style: Beam
 
 
 mouse_bindings:
