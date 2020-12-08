@@ -49,6 +49,22 @@ And move files
 <hr>
 <br>
 
+# Setting up fish
+First install fish with
+```
+sudo pacman -S fish
+```
+then run
+```
+chsh -s /bin/zsh USER
+sudo chsh -s /bin/zsh
+```
+to change default shell
+
+<br>
+<hr>
+<br>
+
 # Solving screen tearing problem in firefox:
 Type <b>about:config</b> and set <b>layers.acceleration.force-enabled = true</b>
 
