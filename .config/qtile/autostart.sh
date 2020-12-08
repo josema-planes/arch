@@ -6,5 +6,3 @@ cbatticon -u 5 &    # battery
 nm-applet &         # wifi
 
 volumeicon &        # volume
-
-udiskie -t &        # external drives
