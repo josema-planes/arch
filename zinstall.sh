@@ -68,8 +68,7 @@ read a1
 
 if [ "$a1" = "" ]; then
     echo -e "${YE}Make sure that you have downloaded it from https://www.gnome-look.org/p/1239855/ (Marwaita) and https://www.gnome-look.org/p/1279924/ (Tela icon theme)${NC}"
-    
-    read any
+    read any1
 
     echo -e "${YE}Installing the Marwaita theme and the Tela icon theme...{NC} "
     sleep 1
@@ -101,6 +100,7 @@ read a2
 
 if [ "$a2" = "" ]; then
     echo -e "${YE}Make sure that you have downloaded it from https://www.gnome-look.org/p/999927/${NC}"
+    read any2
 
     echo -n -e "${PU}Installing the Breeze cursor theme...${NC} "
     sleep 1
@@ -123,6 +123,8 @@ read a3
 
 if [ "$a3" = "" ]; then
     echo -e "${YE}Make sure that you have downloaded it from https://www.gnome-look.org/p/1009236/${NC}"
+    read any3
+    
     echo -e "${PU}Installing the Vimix grub theme...${NC} "
     
     cd Downloads
@@ -142,6 +144,6 @@ if [ "$a3" = "" ]; then
 fi
 
 
-echo -e "${YE}Setting up completed. Rebooting...${NC} "
-sleep 1
+echo -e "${YE}Setting up completed. Press enter to reboot now${NC} "
+read any0
 reboot
