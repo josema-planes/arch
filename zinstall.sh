@@ -16,6 +16,7 @@ sleep 1
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+
 cd ~
 echo -e "${YE}Done${NC}"
 echo -e "${YE}Installing yay pakages...${NC}"
