@@ -1,5 +1,12 @@
 # dotfiles
 
+
+# Clone repository and make a clean installation:
+```
+curl -O "https://raw.githubusercontent.com/josemapt/dotfiles/main/zinstall.sh" | bash
+
+```
+
 <img src="https://github.com/josemapt/dotfiles/blob/main/screenshots/qtile.jpg">
 
 ***Quick Links***
@@ -41,18 +48,9 @@ yay -S vscodium-bin nerd-fonts-ubuntu-mono ccat
 <hr>
 <br>
 
-# Clone repository and make a clean installation:
-```
-curl -O "https://raw.githubusercontent.com/josemapt/dotfiles/main/zinstall.sh" | bash
-
-```
-
-<br>
-<hr>
-<br>
 
 # Setting up zsh
-First install zsh with
+First, install zsh with
 ```
 sudo pacman -S zsh
 ```
