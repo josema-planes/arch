@@ -14,18 +14,14 @@ echo "${YE}Done${NC}"
 echo -n -e "${PU}Do you want to install yay (Y/n)?${NC} "
 read answer1
 if [ "$answer1" = "y" ] || [ "$answer1" = "" ] ;then
-    YE='\033[0;33m'
-    PU='\033[0;35m'
-    NC='\033[0m'
-    
-    echo "${YE}Installing yay...${NC}"
+    echo "Installing yay..."
     sleep 1
     git clone https://aur.archlinux.org/yay.git
     cd yay
     makepkg -si
     cd ~
-    echo "${YE}Done${NC}"
-    echo "${YE}Installing yay pakages...${NC}"
+    echo "Done"
+    echo "Installing yay pakages..."
     sleep 1
     yay -S --noconfirm vscodium-bin nerd-fonts-ubuntu-mono ccat
 fi
@@ -60,15 +56,12 @@ echo -n -e "${PU}Do you want to install the Breeze cursor theme (needed to be do
 read answer2
 
 if [ "$answer2" = "y" ] || [ "$answer1" = "" ] ;then
-    YE='\033[0;33m'
-    PU='\033[0;35m'
-    NC='\033[0m'
-
     cd Downloads/
     ex 165371-Breeze.tar.gz
     rm 165371-Breeze.tar.gz
     sudo mv Breeze /usr/share/icons
     
+    cd ~
     mkdir .config/gtk-3.0
     touch .config/gtk-3.0/settings.ini
     echo "[Settings]" >> .config/gtk-3.0/settings.ini
