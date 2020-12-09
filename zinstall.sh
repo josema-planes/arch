@@ -112,7 +112,7 @@ if [ "$answer4" = "y" ] || [ "$answer1" = "" ] ;then
     
     sudo chmod 777 /etc/default/grub
     echo "GRUB_THEME='/boot/grub/themes/Vimix-1080p/Vimix/theme.txt'" >> /etc/default/grub
-    sudo chmod 744 /etc/default/grub
+    sudo chmod 644 /etc/default/grub
  
     sudo grub-mkconfig -o /boot/grub/grub.cfg
     
