@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # color variables
+RE='\033[0;31m'
 YE='\033[0;33m'
 PU='\033[0;35m'
 NC='\033[0m'
@@ -67,7 +68,7 @@ echo -e -n "${PU}Do you want to install the Marwaita theme and the Tela icon the
 read a1
 
 if [ "$a1" = "" ]; then
-    echo -e "${YE}Make sure that you have downloaded it from https://www.gnome-look.org/p/1239855/ (Marwaita) and https://www.gnome-look.org/p/1279924/ (Tela icon theme)${NC}"
+    echo -e "${RE}Make sure that you have downloaded it from ${PU}https://www.gnome-look.org/p/1239855/ (Marwaita)${RE} and ${PU}https://www.gnome-look.org/p/1279924/ (Tela icon theme)${NC}"
     read any1
 
     echo -e "${YE}Installing the Marwaita theme and the Tela icon theme...{NC} "
@@ -99,7 +100,7 @@ echo -e -n "${PU}Do you want to install he Breeze cursor theme?${NC}"
 read a2
 
 if [ "$a2" = "" ]; then
-    echo -e "${YE}Make sure that you have downloaded it from https://www.gnome-look.org/p/999927/${NC}"
+    echo -e "${RE}Make sure that you have downloaded it from ${PU}https://www.gnome-look.org/p/999927/${NC}"
     read any2
 
     echo -n -e "${PU}Installing the Breeze cursor theme...${NC} "
@@ -122,7 +123,7 @@ echo -e -n "${PU}Do you want to install he Vimix grub theme?${NC}"
 read a3
 
 if [ "$a3" = "" ]; then
-    echo -e "${YE}Make sure that you have downloaded it from https://www.gnome-look.org/p/1009236/${NC}"
+    echo -e "${RE}Make sure that you have downloaded it from ${PU}https://www.gnome-look.org/p/1009236/${NC}"
     read any3
     
     echo -e "${PU}Installing the Vimix grub theme...${NC} "
