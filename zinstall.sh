@@ -35,3 +35,10 @@ chsh -s /bin/zsh $(whoami)
 sudo -s /bin/zsh
 rm -r dotfiles
 echo "\033[0;33mDone\033[0m"
+
+echo -n "Setting up complete. Do you want to reboot now (y/n)? "
+read answer
+
+if [ "$answer" = "y" ] ;then
+    reboot
+fi
