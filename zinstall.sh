@@ -71,7 +71,7 @@ if [ "$answer3" = "y" ] ;then
 fi
 
 
-echo -n -e "${YE}Setting up complete. ${PU}Do you want to reboot now (y/n)?${NC} "
+echo -n -e "${YE}Setting up completed. ${PU}Do you want to reboot now (y/n)?${NC} "
 read answer10
 
 if [ "$answer10" = "y" ] ;then
