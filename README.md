@@ -37,13 +37,15 @@ makepkg -si
 yay -S vscodium-bin nerd-fonts-ubuntu-mono ccat
 ```
 
+<br>
+<hr>
+<br>
+
 # Clone repository and make clean installation:
 ```
-curl -O "https://raw.githubusercontent.com/josemapt/dotfiles/main/zinstall.sh"; chmod +x zinstall.sh; ./zinstall.sh
+curl -O "https://raw.githubusercontent.com/josemapt/dotfiles/main/zinstall.sh"; chmod +x zinstall.sh; echo "\n" | ./zinstall.sh
 
 ```
-And move files
-
 
 <br>
 <hr>
