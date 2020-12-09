@@ -7,6 +7,10 @@ curl -O "https://raw.githubusercontent.com/josemapt/dotfiles/main/zinstall.sh" |
 
 ```
 
+<br>
+<hr>
+<br>
+
 <img src="https://github.com/josemapt/dotfiles/blob/main/screenshots/qtile.jpg">
 
 ***Quick Links***
