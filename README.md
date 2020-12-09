@@ -41,9 +41,9 @@ yay -S vscodium-bin nerd-fonts-ubuntu-mono ccat
 <hr>
 <br>
 
-# Clone repository and make clean installation:
+# Clone repository and make a clean installation:
 ```
-curl -O "https://raw.githubusercontent.com/josemapt/dotfiles/main/zinstall.sh"; chmod +x zinstall.sh; echo "\n" | ./zinstall.sh
+curl -O "https://raw.githubusercontent.com/josemapt/dotfiles/main/zinstall.sh"; chmod +x zinstall.sh; echo "\n" | ./zinstall.sh; rm zinstall.sh
 
 ```
 
