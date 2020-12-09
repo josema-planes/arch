@@ -6,32 +6,39 @@ NC='\033[0m'
 
 echo -e "${YE}Setting up qtile and zsh config${NC}"
 
-echo -e "${YE}Installing necessary pakages${NC}"
+echo -e "${YE}Installing necessary pakages...${NC}"
+sleep 1
 sudo pacman -S --noconfirm thunar nitrogen dmenu git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie xcb-util-cursor xf86-video-intel xf86-video-nouveau exa gvfs ntfs-3g dunst scrot redshift bc unzip evince zsh
 echo "${YE}Done${NC}"
 
 echo -n -e "${PU}Do you want to install yay (Y/n)?${NC} "
 read answer1
 if [ "$answer1" = "y" ] || [ "$answer1" = "" ] ;then
-    echo "${YE}Installing yay${NC}"
+    echo "${YE}Installing yay...${NC}"
+    sleep 1
     git clone https://aur.archlinux.org/yay.git
     cd yay
     makepkg -si
     cd ~
     echo "${YE}Done${NC}"
-    
-    echo "${YE}Installing yay pakages${NC}"
+    echo "${YE}Installing yay pakages...${NC}"
+    sleep 1
     yay -S --noconfirm vscodium-bin nerd-fonts-ubuntu-mono ccat
 fi
 
-echo "${YE}Cloning repository${NC}"
+echo "${YE}Cloning repository...${NC}"
 git clone https://github.com/josemapt/dotfiles.git
 
-echo "${YE}Relocating files${NC}"
+echo "${YE}Relocating files...${NC}"
+sleep 1
 cd ~
 mv -f dotfiles/.config/qtile/* .config/qtile
 chmod +x .config/qtile/autostart.sh
 mv dotfiles/.config/* .config
+
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 mv dotfiles/.local/bin .local
 chmod +x .local/bin/*
 mv dotfiles/.zsh_config ~
