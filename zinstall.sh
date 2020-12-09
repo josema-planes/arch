@@ -99,6 +99,26 @@ if [ "$answer3" = "y" ] || [ "$answer1" = "" ] ;then
     echo -e "${YE}Done${NC}"
 fi
 
+echo -n -e "${PU}Do you want to install the Vimix grub theme (Y/n)?${NC} "
+read answer4
+
+if [ "$answer4" = "y" ] || [ "$answer1" = "" ] ;then
+
+    curl -O "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1NzIyNTAzOTIiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6IjNkYWVhMzExNzIxYTViYzIzMWRjMjJiM2IyNjFkNzBkODU0OGVkNjRkNzg1MDc2ZDlmZDhhNjU5ZjgyM2M5YmYzOTA0ZTcwMWM0YTMxNWNkNTI5OWMwNTZhMmVlNjJmNzMzNjc1NGFiOGUzOGE4YTE5ZjUwZjFjYjkyYWY1YmI1IiwidCI6MTYwNzUyOTc2MCwic3RmcCI6IjBmZGZmZmU0NDEwOGU2YzZiNGNhODAzM2EzNDNkZTI5Iiwic3RpcCI6IjE4OC43OS42NS4xMDgifQ.8hcG5V6BSShxQAj6MoO8dJre5Pe0hHVsrS0_87QQWlo/Vimix-1080p.tar.xz"
+    
+    tar -xf Vimix-1080p.tar.xz
+    rm Vimix-1080p.tar.xz
+    sudo mv Vimix-1080p /boot/grub/themes
+    
+    sudo su
+    echo "GRUB_THEME='/boot/grub/themes/Vimix-1080p/Vimix/theme.txt'" >> /etc/default/grub
+ 
+    grub-mkconfig -o /boot/grub/grub.cfg
+    exit
+    
+    echo -e "${YE}Done${NC}"
+fi
+
 #echo -n -e "${PU}Do you want to set zsh as default shell (Y/n)?${NC} "
 #read answer3
 
