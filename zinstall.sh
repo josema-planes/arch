@@ -1,26 +1,30 @@
 #!/bin/sh
 
-echo "\033[0;33mSetting up qtile and zsh config\033[0m"
+YE='\033[0;33m'
+PU='\033[0;35m'
+NC='\033[0m'
 
-echo "\033[0;33mInstalling necessary pakages\033[0m"
+echo -e "${YE}Setting up qtile and zsh config${NC}"
+
+echo -e "${YE}Installing necessary pakages${NC}"
 sudo pacman -S thunar nitrogen dmenu git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie xcb-util-cursor xf86-video-intel xf86-video-nouveau exa gvfs ntfs-3g dunst scrot redshift bc unzip evince zsh
-echo "\033[0;33mDone\033[0m"
+echo "${YE}Done${NC}"
 
-echo -n "Do you want to install yay (y/n)? "
+echo -n -e "${PU}Do you want to install yay (y/n)${NC}? "
 read answer1
 if [ "$answer1" = "y" ] ;then
-    echo "\033[0;33mInstalling yay\033[0m"
+    echo "${YE}Installing yay${NC}"
     git clone https://aur.archlinux.org/yay.git
     cd yay
     makepkg -si
     cd ~
-    echo "\033[0;33mDone\033[0m"
+    echo "${YE}Done${NC}"
 fi
 
-echo "\033[0;33mCloning repository\033[0m"
+echo "${YE}Cloning repository${NC}"
 git clone https://github.com/josemapt/dotfiles.git
 
-echo "\033[0;33mRelocating files\033[0m"
+echo "${YE}Relocating files${NC}"
 cd ~
 mv -f dotfiles/.config/qtile/* .config/qtile
 chmod +x .config/qtile/autostart.sh
@@ -35,12 +39,12 @@ mv dotfiles/zsh-syntax-highlighting ~
 mv dotfiles/.bashrc ~
 mv dotfiles/.xinitrc ~
 mv dotfiles/.zshrc ~
-chsh -s /bin/zsh $(whoami)
-sudo -s /bin/zsh
+#chsh -s /bin/zsh $(whoami)
+#sudo -s /bin/zsh
 rm -r dotfiles
-echo "\033[0;33mDone\033[0m"
+echo "${YE}Done${NC}"
 
-echo -n "Do you want to install the Breeze cursor theme (needed to be downloaded first) (y/n)? "
+echo -n -e "${PU}Do you want to install the Breeze cursor theme (needed to be downloaded first) (y/n)?${NC} "
 read answer2
 
 if [ "$answer2" = "y" ] ;then
@@ -58,7 +62,7 @@ if [ "$answer2" = "y" ] ;then
 fi
 
 
-echo -n "Setting up complete. Do you want to reboot now (y/n)? "
+echo -n -e "${YE}Setting up complete. ${PU}Do you want to reboot now (y/n)?${NC} "
 read answer10
 
 if [ "$answer10" = "y" ] ;then
