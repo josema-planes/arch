@@ -110,5 +110,5 @@ echo -e "${YE}Done${NC}"
 
 
 echo -e "${YE}Setting up completed. Rebooting... "
-#sleep 1
-#reboot
+sleep 1
+reboot
