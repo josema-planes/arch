@@ -1,5 +1,6 @@
 # autostart when log-in
-if [[ "$(tty)" = "/dev/tty1" ]]; then
+if [[ "$(tty)" = "/dev/tty1" ]] && [[ "$(whoami)" = "josema" ]]; then
+    echo "\n\033[1;33mStarting qtile...\033[0m"
     pgrep qtile || startx
 fi
 
@@ -17,8 +18,8 @@ HISTSIZE=5000
 SAVEHIST=5000
 HISTFILE=~/.zsh_history
 
-# prompt
-PS1="[%F{magenta}(%~) %F{blue}%n%f ] %(?.%F{green}.%F{red})%f "
+# prompt ========================================================
+PS1="%F{magenta}(%~) %F{blue}%n%f %(?.%F{green}.%F{red})%f "
 
 # highlight config
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)       # enables main and brackets highlight
