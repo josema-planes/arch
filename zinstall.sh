@@ -108,15 +108,16 @@ read a3
 
 if [ "$a3" = "" ]; then
     echo -n -e "${PU}Installing the Vimix grub theme...${NC} "
-
-    curl -O "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1NzIyNTAzOTIiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6IjNkYWVhMzExNzIxYTViYzIzMWRjMjJiM2IyNjFkNzBkODU0OGVkNjRkNzg1MDc2ZDlmZDhhNjU5ZjgyM2M5YmYzOTA0ZTcwMWM0YTMxNWNkNTI5OWMwNTZhMmVlNjJmNzMzNjc1NGFiOGUzOGE4YTE5ZjUwZjFjYjkyYWY1YmI1IiwidCI6MTYwNzUyOTc2MCwic3RmcCI6IjBmZGZmZmU0NDEwOGU2YzZiNGNhODAzM2EzNDNkZTI5Iiwic3RpcCI6IjE4OC43OS42NS4xMDgifQ.8hcG5V6BSShxQAj6MoO8dJre5Pe0hHVsrS0_87QQWlo/Vimix-1080p.tar.xz"
-
-    tar -xf Vimix-1080p.tar.xz
-    rm Vimix-1080p.tar.xz
-    sudo mv Vimix-1080p /boot/grub/themes
+    
+    yay -S grub2-theme-vimix-git
+    
+    #cd /boot/grub/themes
+    #rm LICENSE
+    #rm README.md
+    #rm preview.jpg
 
     sudo chmod 777 /etc/default/grub
-    echo "GRUB_THEME='/boot/grub/themes/Vimix-1080p/Vimix/theme.txt'" >> /etc/default/grub
+    echo "GRUB_THEME='/boot/grub/themes/Vimix/theme.txt'" >> /etc/default/grub
     sudo chmod 644 /etc/default/grub
 
     sudo grub-mkconfig -o /boot/grub/grub.cfg
