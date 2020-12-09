@@ -110,11 +110,11 @@ if [ "$answer4" = "y" ] || [ "$answer1" = "" ] ;then
     rm Vimix-1080p.tar.xz
     sudo mv Vimix-1080p /boot/grub/themes
     
-    sudo su
+    sudo chmod 777 /etc/default/grub
     echo "GRUB_THEME='/boot/grub/themes/Vimix-1080p/Vimix/theme.txt'" >> /etc/default/grub
+    sudo chmod 744 /etc/default/grub
  
-    grub-mkconfig -o /boot/grub/grub.cfg
-    exit
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
     
     echo -e "${YE}Done${NC}"
 fi
