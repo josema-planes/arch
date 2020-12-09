@@ -28,11 +28,10 @@ else
 fi
 
 # Installing yay pakages------------------------------------------------
-echo -e "${YE}Installing yay pakages...${NC}"
-sleep 1
-
 cmd=`pacman -Qqm`
 if [[ $cmd != *vscodium-bin* ]]; then
+    echo -e "${YE}Installing yay pakages...${NC}"
+    sleep 1
     yay -S --noconfirm vscodium-bin
 fi
 if [[ $cmd != *nerd-fonts-ubuntu-mono* ]]; then
@@ -197,5 +196,10 @@ fi
 
 
 echo -e -n "${YE}Setting up completed. Press ${PU}enter ${YE}to reboot now${NC} "
-read any0
-reboot
+read a0
+
+if [ "${a0}" = "" ]; then
+    reboot
+else
+    break
+fi
