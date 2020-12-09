@@ -3,7 +3,7 @@
 
 # Clone repository and make a clean installation:
 ```
-curl -O "https://raw.githubusercontent.com/josemapt/dotfiles/main/zinstall.sh" | bash
+curl https://raw.githubusercontent.com/josemapt/dotfiles/main/zinstall.sh | bash
 
 ```
 
