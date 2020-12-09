@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cd ~
-mv -f dotfiles/.config/qtile .config
+mv -f dotfiles/.config/qtile/* .config/qtile
 chmod +x .config/qtile/autostart.sh
 mv dotfiles/.config/* .config
 mv dotfiles/.local/bin .local
