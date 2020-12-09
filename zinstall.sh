@@ -10,9 +10,9 @@ echo -e "${YE}Installing necessary pakages${NC}"
 sudo pacman -S --noconfirm thunar nitrogen dmenu git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie xcb-util-cursor xf86-video-intel xf86-video-nouveau exa gvfs ntfs-3g dunst scrot redshift bc unzip evince zsh
 echo "${YE}Done${NC}"
 
-echo -n -e "${PU}Do you want to install yay (y/n)${NC}? "
+echo -n -e "${PU}Do you want to install yay (Y/n)?${NC} "
 read answer1
-if [ "$answer1" = "y" ] ;then
+if [ "$answer1" = "y" ] || [ "$answer1" = "" ] ;then
     echo "${YE}Installing yay${NC}"
     git clone https://aur.archlinux.org/yay.git
     cd yay
@@ -45,10 +45,10 @@ mv dotfiles/.zshrc ~
 rm -r dotfiles
 echo "${YE}Done${NC}"
 
-echo -n -e "${PU}Do you want to install the Breeze cursor theme (needed to be downloaded first) (y/n)?${NC} "
+echo -n -e "${PU}Do you want to install the Breeze cursor theme (needed to be downloaded first) (Y/n)?${NC} "
 read answer2
 
-if [ "$answer2" = "y" ] ;then
+if [ "$answer2" = "y" ] || [ "$answer1" = "" ] ;then
     cd Downloads/
     ex 165371-Breeze.tar.gz
     rm 165371-Breeze.tar.gz
@@ -62,18 +62,18 @@ if [ "$answer2" = "y" ] ;then
     sudo echo "Inherits=Breeze" >> /usr/share/icons/default/index.theme
 fi
 
-echo -n -e "${PU}Do you want to set zsh as default shell (y/n)?${NC} "
+echo -n -e "${PU}Do you want to set zsh as default shell (Y/n)?${NC} "
 read answer3
 
-if [ "$answer3" = "y" ] ;then
+if [ "$answer3" = "y" ] || [ "$answer1" = "" ] ;then
     chsh -s /bin/zsh $(whoami)
     sudo -s /bin/zsh
 fi
 
 
-echo -n -e "${YE}Setting up completed. ${PU}Do you want to reboot now (y/n)?${NC} "
+echo -n -e "${YE}Setting up completed. ${PU}Do you want to reboot now (Y/n)?${NC} "
 read answer10
 
-if [ "$answer10" = "y" ] ;then
+if [ "$answer10" = "y" ] || [ "$answer1" = "" ] ;then
     reboot
 fi
