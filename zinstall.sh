@@ -13,7 +13,7 @@ echo -e "${YE}Done${NC}"
 
 echo -n -e "${PU}Do you want to install yay (Y/n)?${NC} "
 read answer1
-if [ "$answer1" = "y" ] || [ "$answer1" = "" ] ;then
+if [ "$answer1" = "y" ] || [ "$answer1" = "" ] || [ "$answer1" = "\n" ] ;then
     echo -e "${YE}Installing yay...${NC}"
     sleep 1
     git clone https://aur.archlinux.org/yay.git
@@ -61,7 +61,7 @@ echo "[Settings]" >> .config/gtk-3.0/settings.ini
 echo -n -e "${PU}Do you want to install the Marwaita theme and the Tela icon theme(Y/n)?${NC} "
 read answer2
 
-if [ "$answer2" = "y" ] || [ "$answer1" = "" ] ;then
+if [ "$answer2" = "y" ] || [ "$answer1" = "" ] || [ "$answer1" = "\n" ] ;then
     curl -O "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2MDY0ODc4OTkiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6IjEyNGM5NTBiMTBhODdlZjIzNzQ1ODNlNzg0NTg5NDllMGRjMDljZmY5MjkwNDJlMWNkMjg0Yjg1ODVkZTU2ODFhOTQ2YTEyMDYwNmI3N2QxMTE0MjY2NTA0NmU2MmQyZmQ5NzYwYjRmZWIyZGJhMDdkN2NiMzczM2E1YzU0ODVlIiwidCI6MTYwNzUyOTM5NSwic3RmcCI6IjBmZGZmZmU0NDEwOGU2YzZiNGNhODAzM2EzNDNkZTI5Iiwic3RpcCI6IjE4OC43OS42NS4xMDgifQ.cWKIUlIt7Y-1BBrQwl6PdDEzAY-sHs77b6fesmagPXg/01-Tela.tar.xz"
     curl -O "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2MDUzNTE5MjUiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6IjQ4MTljYjlmZDAwODkwNDQ3OTA1NWY3MjZiZjFmNDBkZDkwOTNjNWMxNWQ0M2ZhZjliNWU3NjI0ZmNkNjUwNGFhZTEzNTA1MjQ0OGUyMmNjZjBiN2MyNDQ5ODlmMWQxOTZhZGJmMjRlMjVkY2MzNmU0MDU4Yzk2ODZjOWVlZDhkIiwidCI6MTYwNzUyNjgzNSwic3RmcCI6IjBmZGZmZmU0NDEwOGU2YzZiNGNhODAzM2EzNDNkZTI5Iiwic3RpcCI6IjE4OC43OS42NS4xMDgifQ.-CHpmosiBNX2q7JEZE1bQxwNtJvJczUHkOal3NgMqGM/Marwaita.tar.xz"
 
@@ -85,7 +85,7 @@ fi
 echo -n -e "${PU}Do you want to install the Breeze cursor theme (Y/n)?${NC} "
 read answer3
 
-if [ "$answer3" = "y" ] || [ "$answer1" = "" ] ;then
+if [ "$answer3" = "y" ] || [ "$answer1" = "" ] || [ "$answer1" = "\n" ] ;then
 
     curl -O "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0NjA3MzUyNjkiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6ImZmYTc5OWRmNzUwYmQ5MzM3ZDA5ZGNiOTEzYTFjNzRlZDY5M2MxNTJkM2ZjMzJhYzZlNmYxNTgwOWJlZmJjMjc5MmMyNTg0ZTY2OTg3ODcwOGI0MWMzYzE4ZjMzN2RkMTU2ZDE3NzdkYTBjM2Y0YmQ4YzZjNzE3MzM3YTRiZTc0IiwidCI6MTYwNzUyNjE4NCwic3RmcCI6IjUzZmVmYTE0YTM0ZTIyZjVkNmM0N2U5YjI0ZDE3NGU1Iiwic3RpcCI6IjE4OC43OS42NS4xMDgifQ.3ROKH6C9yEk4d-SjoUqe8tCa03X-zWHzzgnibkpeOIc/165371-Breeze.tar.gz"
 
@@ -102,7 +102,7 @@ fi
 echo -n -e "${PU}Do you want to install the Vimix grub theme (Y/n)?${NC} "
 read answer4
 
-if [ "$answer4" = "y" ] || [ "$answer1" = "" ] ;then
+if [ "$answer4" = "y" ] || [ "$answer1" = "" ] || [ "$answer1" = "\n" ] ;then
 
     curl -O "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1NzIyNTAzOTIiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6IjNkYWVhMzExNzIxYTViYzIzMWRjMjJiM2IyNjFkNzBkODU0OGVkNjRkNzg1MDc2ZDlmZDhhNjU5ZjgyM2M5YmYzOTA0ZTcwMWM0YTMxNWNkNTI5OWMwNTZhMmVlNjJmNzMzNjc1NGFiOGUzOGE4YTE5ZjUwZjFjYjkyYWY1YmI1IiwidCI6MTYwNzUyOTc2MCwic3RmcCI6IjBmZGZmZmU0NDEwOGU2YzZiNGNhODAzM2EzNDNkZTI5Iiwic3RpcCI6IjE4OC43OS42NS4xMDgifQ.8hcG5V6BSShxQAj6MoO8dJre5Pe0hHVsrS0_87QQWlo/Vimix-1080p.tar.xz"
     
@@ -128,9 +128,6 @@ fi
 #fi
 
 
-echo -n -e "${YE}Setting up completed. ${PU}Do you want to reboot now (Y/n)?${NC} "
-read answer10
-
-if [ "$answer10" = "y" ] || [ "$answer1" = "" ] ;then
-    reboot
-fi
+echo -e "${YE}Setting up completed. Rebooting... "
+sleep 1
+reboot
