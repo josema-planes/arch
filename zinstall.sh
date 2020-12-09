@@ -69,7 +69,7 @@ echo -e -n "${PU}Do you want to install the Marwaita theme and the Tela icon the
 read a1
 
 if [ "${a1}" = "y" ] || [ "${a1}" = "" ]; then
-    echo -e -n "${RE}Make sure that you have downloaded it from ${PU}https://www.gnome-look.org/p/1239855/ ${YE}(Marwaita) and ${PU}https://www.gnome-look.org/p/1279924/ ${RE}(Tela icon theme)${NC}"
+    echo -e -n "${RE}Make sure that you have downloaded it from ${PU}https://www.gnome-look.org/p/1239855/ ${RE}(Marwaita) and ${PU}https://www.gnome-look.org/p/1279924/ ${RE}(Tela icon theme)${NC}"
     read any1
 
     echo -e "${YE}Installing the Marwaita theme and the Tela icon theme...${NC} "
