@@ -58,17 +58,17 @@ mkdir .config/gtk-3.0
 touch .config/gtk-3.0/settings.ini
 echo "[Settings]" >> .config/gtk-3.0/settings.ini
 
-echo -n -e "${PU}Do you want to install the Marwaita theme (Y/n)?${NC} "
+echo -n -e "${PU}Do you want to install the Marwaita theme and the Tela icon theme(Y/n)?${NC} "
 read answer2
 
 if [ "$answer2" = "y" ] || [ "$answer1" = "" ] ;then
-    curl -O "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1OTE5MDMxMTAiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6ImRhYTNmODlhNDdiMjI5YzA0MWEzOTk2MzBhOWVlMDY0MWNlNmEwZWU3OTJiZWE4MTY3MDUxYjZkNDliYmFlNDg1NDEwODVhNGM3NDQ4NGU5NmMwNzk3ZjhlMWNkYzEyNDBmN2I3OWY5MDFlMjI3NmI1ODk5N2Y4NzIyMDM5ZTU0IiwidCI6MTYwNzUyNzc2Nywic3RmcCI6IjBmZGZmZmU0NDEwOGU2YzZiNGNhODAzM2EzNDNkZTI5Iiwic3RpcCI6IjE4OC43OS42NS4xMDgifQ.jRqhAyfleBB-lx0biSbTKq5jNKwIWWzjVwtQJNTLPbk/Marwaita%20Icons-20200611191424.tar.xz"
+    curl -O "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2MDY0ODc4OTkiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6IjEyNGM5NTBiMTBhODdlZjIzNzQ1ODNlNzg0NTg5NDllMGRjMDljZmY5MjkwNDJlMWNkMjg0Yjg1ODVkZTU2ODFhOTQ2YTEyMDYwNmI3N2QxMTE0MjY2NTA0NmU2MmQyZmQ5NzYwYjRmZWIyZGJhMDdkN2NiMzczM2E1YzU0ODVlIiwidCI6MTYwNzUyOTM5NSwic3RmcCI6IjBmZGZmZmU0NDEwOGU2YzZiNGNhODAzM2EzNDNkZTI5Iiwic3RpcCI6IjE4OC43OS42NS4xMDgifQ.cWKIUlIt7Y-1BBrQwl6PdDEzAY-sHs77b6fesmagPXg/01-Tela.tar.xz"
     curl -O "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2MDUzNTE5MjUiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6IjQ4MTljYjlmZDAwODkwNDQ3OTA1NWY3MjZiZjFmNDBkZDkwOTNjNWMxNWQ0M2ZhZjliNWU3NjI0ZmNkNjUwNGFhZTEzNTA1MjQ0OGUyMmNjZjBiN2MyNDQ5ODlmMWQxOTZhZGJmMjRlMjVkY2MzNmU0MDU4Yzk2ODZjOWVlZDhkIiwidCI6MTYwNzUyNjgzNSwic3RmcCI6IjBmZGZmZmU0NDEwOGU2YzZiNGNhODAzM2EzNDNkZTI5Iiwic3RpcCI6IjE4OC43OS42NS4xMDgifQ.-CHpmosiBNX2q7JEZE1bQxwNtJvJczUHkOal3NgMqGM/Marwaita.tar.xz"
 
-    tar -xf Marwaita%20Icons-20200611191424.tar.xz
-    rm Marwaita%20Icons-20200611191424.tar.xz
-    sudo mv Marwaita-Dark/ /usr/share/icons/
-    sudo mv Marwaita-Light/ /usr/share/icons/
+    tar -xf 01-Tela.tar.xz
+    rm 01-Tela.tar.xz
+    sudo mv Tela /usr/share/icons/
+    sudo mv Tela-dark/ /usr/share/icons/
 
     tar -xf Marwaita.tar.xz
     rm Marwaita.tar.xz
