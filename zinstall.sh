@@ -39,6 +39,8 @@ mv dotfiles/.config/* .config
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+nvim -c 'PlugInstall' &
+
 mv dotfiles/.local/bin .local
 chmod +x .local/bin/*
 mv dotfiles/.zsh_config ~
