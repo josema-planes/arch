@@ -1,7 +1,15 @@
-alias v='nvim'
 alias grep='grep --color=auto'
-alias tree='exa -T'
+
 alias ls='exa --group-directories-first'
+alias ll='exa -l --group-directories-first'
+alias tree='exa -T'
+
 alias cat='ccat -G Plaintext="blink" -G Keyword="purple" -G String="darkgreen" -G Punctuation="brown" -G Comment="faint"'
-alias yay='yay --nodiffmenu'
 alias ns='notify-send'
+
+alias nv='nvim'
+alias yay='yay --nodiffmenu'
+
+alias test_qtile='Xephyr -br -ac -noreset -screen 1280x720 :1 & ; DISPLAY=:1 qtile'
+
+alias mkex='chmod +x'
