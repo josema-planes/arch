@@ -20,7 +20,7 @@ cd ~
 echo -e "${YE}Done${NC}"
 echo -e "${YE}Installing yay pakages...${NC}"
 sleep 1
-yay -S --noconfirm vscodium-bin nerd-fonts-ubuntu-mono ccat
+yay -S vscodium-bin nerd-fonts-ubuntu-mono ccat
 
 echo -e "${YE}Cloning repository...${NC}"
 git clone https://github.com/josemapt/dotfiles.git
