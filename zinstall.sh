@@ -76,7 +76,7 @@ if [ "$answer2" = "y" ] || [ "$answer1" = "" ] ;then
     sudo mv Marwaita\ Dark/ /usr/share/themes/
     sudo mv Marwaita\ Light/ /usr/share/themes/
     
-    echo "gtk-icon-theme-name = Marwaita-Dark" >> .config/gtk-3.0/settings.ini
+    echo "gtk-icon-theme-name = Tela" >> .config/gtk-3.0/settings.ini
     echo "gtk-theme-name = Marwaita Dark" >> .config/gtk-3.0/settings.ini
     
     echo -e "${YE}Done${NC}"
