@@ -9,7 +9,7 @@ echo -e "${YE}Setting up qtile and zsh config${NC}"
 echo -e "${YE}Installing necessary pakages...${NC}"
 sleep 1
 sudo pacman -S --noconfirm thunar nitrogen dmenu git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie xcb-util-cursor xf86-video-intel xf86-video-nouveau exa gvfs ntfs-3g dunst scrot redshift bc unzip evince zsh
-echo "${YE}Done${NC}"
+echo -e "${YE}Done${NC}"
 
 echo -n -e "${PU}Do you want to install yay (Y/n)?${NC} "
 read answer1
