@@ -1,7 +1,6 @@
 #!/bin/sh
 
 # color variables
-RE='\033[0;31m'
 YE='\033[0;33m'
 PU='\033[0;35m'
 NC='\033[0m'
@@ -11,7 +10,7 @@ echo -e "${YE}Setting up qtile and zsh config${NC}"
 # Installing necessary pakages------------------------------------------
 echo -e "${YE}Installing necessary pakages...${NC}"
 sleep 1
-sudo pacman -S --noconfirm thunar nitrogen dmenu git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie xcb-util-cursor xf86-video-intel xf86-video-nouveau exa gvfs ntfs-3g dunst scrot redshift bc unzip evince zsh xdg-utils
+sudo pacman -S --noconfirm thunar nitrogen dmenu git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie xcb-util-cursor xf86-video-intel xf86-video-nouveau exa gvfs ntfs-3g dunst scrot redshift bc unzip evince zsh
 echo -e "${YE}Done${NC}"
 
 # Installing yay--------------------------------------------------------
@@ -64,11 +63,12 @@ touch .config/gtk-3.0/settings.ini
 echo "[Settings]" >> .config/gtk-3.0/settings.ini
 #--------------------------
 
-echo -e -n "${PU}Do you want to install the Marwaita theme and the Tela icon theme?${NC}"
+#Installing extra pakages
+echo -e -n "${PU}Do you want to install the Marwaita theme and the Tela icon theme (y/n)?${NC}"
 read a1
 
-if [ "$a1" = "" ]; then
-    echo -e "${RE}Make sure that you have downloaded it from ${PU}https://www.gnome-look.org/p/1239855/ (Marwaita)${RE} and ${PU}https://www.gnome-look.org/p/1279924/ (Tela icon theme)${NC}"
+if [ "${a1}" = "y" ] || [ "${a1}" = "" ]; then
+    echo -e -n "${YE}Make sure that you have downloaded it from https://www.gnome-look.org/p/1239855/ (Marwaita) and https://www.gnome-look.org/p/1279924/ (Tela icon theme)${NC}"
     read any1
 
     echo -e "${YE}Installing the Marwaita theme and the Tela icon theme...{NC} "
@@ -93,14 +93,16 @@ if [ "$a1" = "" ]; then
 
     echo -e "${YE}Done${NC}"
 
+else
+    break
 fi
 
 
-echo -e -n "${PU}Do you want to install he Breeze cursor theme?${NC}"
+echo -e -n "${PU}Do you want to install he Breeze cursor theme (y/n)?${NC}"
 read a2
 
-if [ "$a2" = "" ]; then
-    echo -e "${RE}Make sure that you have downloaded it from ${PU}https://www.gnome-look.org/p/999927/${NC}"
+if [ "${a2}" = "" ] || [ "${a2}" = "y" ]; then
+    echo -e -n "${YE}Make sure that you have downloaded it from https://www.gnome-look.org/p/999927/${NC}"
     read any2
 
     echo -n -e "${PU}Installing the Breeze cursor theme...${NC} "
@@ -116,14 +118,16 @@ if [ "$a2" = "" ]; then
 
     sudo sed -i 's/Adwaita/Breeze/g' /usr/share/icons/default/index.theme
     echo -e "${YE}Done${NC}"
+else
+    break
 fi
 
 
-echo -e -n "${PU}Do you want to install he Vimix grub theme?${NC}"
+echo -e -n "${PU}Do you want to install he Vimix grub theme (y/n)?${NC}"
 read a3
 
-if [ "$a3" = "" ]; then
-    echo -e "${RE}Make sure that you have downloaded it from ${PU}https://www.gnome-look.org/p/1009236/${NC}"
+if [ "${a3}" = "" ] || [ "${a3}" = "y" ]; then
+    echo -e -n "${YE}Make sure that you have downloaded it from https://www.gnome-look.org/p/1009236/${NC}"
     read any3
     
     echo -e "${PU}Installing the Vimix grub theme...${NC} "
@@ -142,9 +146,12 @@ if [ "$a3" = "" ]; then
     sudo grub-mkconfig -o /boot/grub/grub.cfg
 
     echo -e "${YE}Done${NC}"
+
+else
+    break
 fi
 
 
-echo -e "${YE}Setting up completed. Press enter to reboot now${NC} "
+echo -e -n "${YE}Setting up completed. Press enter to reboot now${NC} "
 read any0
 reboot
