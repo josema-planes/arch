@@ -119,7 +119,6 @@ screens = [
                 widget.GroupBox(
                     fontsize = 35,
                     padding = 10,
-                    margin_y = -1,
                     borderwidth = 2,
                     active = colors[1],
                     inactive = colors[2],
@@ -221,9 +220,12 @@ floating_layout = layout.Floating(float_rules=[
     {'wmclass': 'confirmreset'},  # gitk
     {'wmclass': 'makebranch'},  # gitk
     {'wmclass': 'maketag'},  # gitk
+    {'wmclass': 'ssh-askpass'},  # ssh-askpass
     {'wname': 'branchdialog'},  # gitk
     {'wname': 'pinentry'},  # GPG key password entry
-    {'wmclass': 'ssh-askpass'},  # ssh-askpass
+
+    {'wname': 'zoom'},
+    {'wmclass': 'zoom'},
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
