@@ -7,7 +7,7 @@ NC='\033[0m'
 echo -e "${YE}Setting up qtile and zsh config${NC}"
 
 echo -e "${YE}Installing necessary pakages${NC}"
-sudo pacman -S thunar nitrogen dmenu git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie xcb-util-cursor xf86-video-intel xf86-video-nouveau exa gvfs ntfs-3g dunst scrot redshift bc unzip evince zsh
+sudo pacman -S --noconfirm thunar nitrogen dmenu git brightnessctl python-psutil acpi alsa-utils volumeicon cbatticon network-manager-applet geeqie xcb-util-cursor xf86-video-intel xf86-video-nouveau exa gvfs ntfs-3g dunst scrot redshift bc unzip evince zsh
 echo "${YE}Done${NC}"
 
 echo -n -e "${PU}Do you want to install yay (y/n)${NC}? "
@@ -19,6 +19,9 @@ if [ "$answer1" = "y" ] ;then
     makepkg -si
     cd ~
     echo "${YE}Done${NC}"
+    
+    echo "${YE}Installing yay pakages${NC}"
+    yay -S --noconfirm vscodium-bin nerd-fonts-ubuntu-mono ccat
 fi
 
 echo "${YE}Cloning repository${NC}"
@@ -39,8 +42,6 @@ mv dotfiles/zsh-syntax-highlighting ~
 mv dotfiles/.bashrc ~
 mv dotfiles/.xinitrc ~
 mv dotfiles/.zshrc ~
-#chsh -s /bin/zsh $(whoami)
-#sudo -s /bin/zsh
 rm -r dotfiles
 echo "${YE}Done${NC}"
 
@@ -59,6 +60,14 @@ if [ "$answer2" = "y" ] ;then
     
     sudo sed 'Inherits=Adwaita' /usr/share/icons/default/index.theme
     sudo echo "Inherits=Breeze" >> /usr/share/icons/default/index.theme
+fi
+
+echo -n -e "${PU}Do you want to set zsh as default shell (y/n)?${NC} "
+read answer3
+
+if [ "$answer3" = "y" ] ;then
+    chsh -s /bin/zsh $(whoami)
+    sudo -s /bin/zsh
 fi
 
 
