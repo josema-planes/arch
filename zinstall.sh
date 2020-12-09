@@ -14,6 +14,6 @@ mv dotfiles/zsh-syntax-highlighting ~
 mv dotfiles/.bashrc ~
 mv dotfiles/.xinitrc ~
 mv dotfiles/.zshrc ~
-chsh -s $(whoami) /bin/zsh
+chsh -s /bin/zsh $(whoami)
 sudo -s /bin/zsh
 rm -r dotfiles
