@@ -109,6 +109,6 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 echo -e "${YE}Done${NC}"
 
 
-echo -e "${YE}Setting up completed. Rebooting... "
+echo -e "${YE}Setting up completed. Rebooting...${NC} "
 sleep 1
 reboot
