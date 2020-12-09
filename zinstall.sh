@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo "setting up qtile and zsh config"
 cd ~
 mv -f dotfiles/.config/qtile/* .config/qtile
 chmod +x .config/qtile/autostart.sh
@@ -17,3 +18,5 @@ mv dotfiles/.zshrc ~
 chsh -s /bin/zsh $(whoami)
 sudo -s /bin/zsh
 rm -r dotfiles
+
+echo "done"
