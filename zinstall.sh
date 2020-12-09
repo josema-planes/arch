@@ -20,7 +20,8 @@ makepkg -si
 echo -e "${YE}Done${NC}"
 cd ~
 echo -e "${YE}Installing yay pakages...${NC}"
-sleep 1
+
+
 
 yay -S vscodium-bin nerd-fonts-ubuntu-mono ccat
 
