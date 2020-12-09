@@ -68,6 +68,7 @@ if [ "$answer2" = "y" ] || [ "$answer1" = "" ] ;then
     tar -xf Marwaita%20Icons-20200611191424.tar.xz
     rm Marwaita%20Icons-20200611191424.tar.xz
     sudo mv Marwaita-Dark/ /usr/share/icons/
+    sudo mv Marwaita-Light/ /usr/share/icons/
 
     tar -xf Marwaita.tar.xz
     rm Marwaita.tar.xz
