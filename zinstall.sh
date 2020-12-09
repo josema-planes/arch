@@ -120,9 +120,9 @@ if [ "$answer4" = "y" ] || [ "$answer1" = "" ] ;then
 fi
 
 #echo -n -e "${PU}Do you want to set zsh as default shell (Y/n)?${NC} "
-#read answer3
+#read answer5
 
-#if [ "$answer3" = "y" ] || [ "$answer1" = "" ] ;then
+#if [ "$answer5" = "y" ] || [ "$answer1" = "" ] ;then
 #    chsh -s /bin/zsh $(whoami)
 #    sudo -s /bin/zsh
 #fi
