@@ -54,7 +54,7 @@ mkdir .config/gtk-3.0
 touch .config/gtk-3.0/settings.ini
 echo "[Settings]" >> .config/gtk-3.0/settings.ini
 
-echo -n -e "${PU}Install the Marwaita theme and the Tela icon theme...{NC} "
+echo -n -e "${PU}Installing the Marwaita theme and the Tela icon theme...{NC} "
 sleep 1
 
 curl -O "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2MDY0ODc4OTkiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6IjEyNGM5NTBiMTBhODdlZjIzNzQ1ODNlNzg0NTg5NDllMGRjMDljZmY5MjkwNDJlMWNkMjg0Yjg1ODVkZTU2ODFhOTQ2YTEyMDYwNmI3N2QxMTE0MjY2NTA0NmU2MmQyZmQ5NzYwYjRmZWIyZGJhMDdkN2NiMzczM2E1YzU0ODVlIiwidCI6MTYwNzUyOTM5NSwic3RmcCI6IjBmZGZmZmU0NDEwOGU2YzZiNGNhODAzM2EzNDNkZTI5Iiwic3RpcCI6IjE4OC43OS42NS4xMDgifQ.cWKIUlIt7Y-1BBrQwl6PdDEzAY-sHs77b6fesmagPXg/01-Tela.tar.xz"
