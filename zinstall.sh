@@ -54,16 +54,17 @@ mv dotfiles/.zshrc ~
 rm -r dotfiles
 echo "${YE}Done${NC}"
 
-echo -n -e "${PU}Do you want to install the Breeze cursor theme (needed to be downloaded first) (Y/n)?${NC} "
+echo -n -e "${PU}Do you want to install the Breeze cursor theme (Y/n)?${NC} "
 read answer2
 
 if [ "$answer2" = "y" ] || [ "$answer1" = "" ] ;then
-    cd Downloads/
+
+    curl -O "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0NjA3MzUyNjkiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6ImZmYTc5OWRmNzUwYmQ5MzM3ZDA5ZGNiOTEzYTFjNzRlZDY5M2MxNTJkM2ZjMzJhYzZlNmYxNTgwOWJlZmJjMjc5MmMyNTg0ZTY2OTg3ODcwOGI0MWMzYzE4ZjMzN2RkMTU2ZDE3NzdkYTBjM2Y0YmQ4YzZjNzE3MzM3YTRiZTc0IiwidCI6MTYwNzUyNjE4NCwic3RmcCI6IjUzZmVmYTE0YTM0ZTIyZjVkNmM0N2U5YjI0ZDE3NGU1Iiwic3RpcCI6IjE4OC43OS42NS4xMDgifQ.3ROKH6C9yEk4d-SjoUqe8tCa03X-zWHzzgnibkpeOIc/165371-Breeze.tar.gz"
+
     ex 165371-Breeze.tar.gz
     rm 165371-Breeze.tar.gz
     sudo mv Breeze /usr/share/icons
     
-    cd ~
     mkdir .config/gtk-3.0
     touch .config/gtk-3.0/settings.ini
     echo "[Settings]" >> .config/gtk-3.0/settings.ini
