@@ -1,8 +1,9 @@
 #!/bin/sh
 
 # color variables
-YE='\033[0;33m'
-PU='\033[0;35m'
+RE='\033[1;31m'
+YE='\033[1;33m'
+PU='\033[1;35m'
 NC='\033[0m'
 
 echo -e "${YE}Setting up qtile and zsh config${NC}"
@@ -68,10 +69,10 @@ echo -e -n "${PU}Do you want to install the Marwaita theme and the Tela icon the
 read a1
 
 if [ "${a1}" = "y" ] || [ "${a1}" = "" ]; then
-    echo -e -n "${YE}Make sure that you have downloaded it from https://www.gnome-look.org/p/1239855/ (Marwaita) and https://www.gnome-look.org/p/1279924/ (Tela icon theme)${NC}"
+    echo -e -n "${RE}Make sure that you have downloaded it from ${PU}https://www.gnome-look.org/p/1239855/ ${YE}(Marwaita) and ${PU}https://www.gnome-look.org/p/1279924/ ${YE}(Tela icon theme)${NC}"
     read any1
 
-    echo -e "${YE}Installing the Marwaita theme and the Tela icon theme...{NC} "
+    echo -e "${YE}Installing the Marwaita theme and the Tela icon theme...${NC} "
     sleep 1
     cd Downloads/
 
@@ -102,7 +103,7 @@ echo -e -n "${PU}Do you want to install he Breeze cursor theme (y/n)?${NC}"
 read a2
 
 if [ "${a2}" = "" ] || [ "${a2}" = "y" ]; then
-    echo -e -n "${YE}Make sure that you have downloaded it from https://www.gnome-look.org/p/999927/${NC}"
+    echo -e -n "${RE}Make sure that you have downloaded it from https://www.gnome-look.org/p/999927/ ${NC}"
     read any2
 
     echo -n -e "${PU}Installing the Breeze cursor theme...${NC} "
@@ -127,7 +128,7 @@ echo -e -n "${PU}Do you want to install he Vimix grub theme (y/n)?${NC}"
 read a3
 
 if [ "${a3}" = "" ] || [ "${a3}" = "y" ]; then
-    echo -e -n "${YE}Make sure that you have downloaded it from https://www.gnome-look.org/p/1009236/${NC}"
+    echo -e -n "${RE}Make sure that you have downloaded it from https://www.gnome-look.org/p/1009236/ ${NC}"
     read any3
     
     echo -e "${PU}Installing the Vimix grub theme...${NC} "
@@ -152,6 +153,6 @@ else
 fi
 
 
-echo -e -n "${YE}Setting up completed. Press enter to reboot now${NC} "
+echo -e -n "${YE}Setting up completed. Press ${PU}enter ${YE}to reboot now${NC} "
 read any0
 reboot
