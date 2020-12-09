@@ -14,22 +14,22 @@ echo "${YE}Done${NC}"
 echo -n -e "${PU}Do you want to install yay (Y/n)?${NC} "
 read answer1
 if [ "$answer1" = "y" ] || [ "$answer1" = "" ] ;then
-    echo "Installing yay..."
+    echo -e "${YE}Installing yay...${NC}"
     sleep 1
     git clone https://aur.archlinux.org/yay.git
     cd yay
     makepkg -si
     cd ~
-    echo "Done"
-    echo "Installing yay pakages..."
+    echo -e "${YE}Done${NC}"
+    echo -e "${YE}Installing yay pakages...${NC}"
     sleep 1
     yay -S --noconfirm vscodium-bin nerd-fonts-ubuntu-mono ccat
 fi
 
-echo "${YE}Cloning repository...${NC}"
+echo -e "${YE}Cloning repository...${NC}"
 git clone https://github.com/josemapt/dotfiles.git
 
-echo "${YE}Relocating files...${NC}"
+echo -e "${YE}Relocating files...${NC}"
 sleep 1
 cd ~
 mv -f dotfiles/.config/qtile/* .config/qtile
@@ -52,7 +52,7 @@ mv dotfiles/.bashrc ~
 mv dotfiles/.xinitrc ~
 mv dotfiles/.zshrc ~
 rm -r dotfiles
-echo "${YE}Done${NC}"
+echo -e "${YE}Done${NC}"
 
 echo -n -e "${PU}Do you want to install the Breeze cursor theme (Y/n)?${NC} "
 read answer2
@@ -71,6 +71,7 @@ if [ "$answer2" = "y" ] || [ "$answer1" = "" ] ;then
     echo "gtk-cursor-theme-name = Breeze" >> .config/gtk-3.0/settings.ini
     
     sudo sed -i 's/Adwaita/Breeze/g' /usr/share/icons/default/index.theme
+    echo -e "${YE}Done${NC}"
 fi
 
 #echo -n -e "${PU}Do you want to set zsh as default shell (Y/n)?${NC} "
