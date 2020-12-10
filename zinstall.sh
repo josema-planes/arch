@@ -34,10 +34,10 @@ if [[ $cmd != *vscodium-bin* ]]; then
     a="vscodium-bin"
 fi
 if [[ $cmd != *nerd-fonts-ubuntu-mono* ]]; then
-    b="nerd-fonts"
+    b="nerd-fonts-ubuntu-mono"
 fi
 if [[ $cmd != *ccat* ]]; then
-    c="ccat "
+    c="ccat"
 fi
 pakages="$a $b $c"
 yay -S --noconfirm $pakages
