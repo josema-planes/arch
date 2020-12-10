@@ -213,7 +213,7 @@ if [ "${a4}" = "" ] || [ "${a5}" = "y" ]; then
     echo -e -n "${YE}Press ${PU}enter${YE} to test it${NC}"
     read aTest
     dunst &
-    notify-send "This is a nandom notification"
+    notify-send "This is a random notification :)"
 else
     break
 fi
