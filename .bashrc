@@ -4,7 +4,7 @@
 
 # autostart when log-in
 if [[ "$(tty)" = "/dev/tty1" ]] && [[ "$(whoami)" = "josema" ]]; then
-    echo "\n\033[1;33mStarting qtile...\033[0m"
+    echo -e "\n\033[1;33mStarting qtile...\033[0m"
     pgrep qtile || startx
 fi
 
