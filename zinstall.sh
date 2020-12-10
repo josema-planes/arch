@@ -131,7 +131,7 @@ else
 fi
 
 echo ""
-echo -e -n "${PU}Do you want to install he Breeze cursor theme (y/n)?${NC}"
+echo -e -n "${PU}Do you want to install he Breeze cursor theme (y/n)?${NC} "
 read a2
 
 if [ "${a2}" = "" ] || [ "${a2}" = "y" ]; then
@@ -162,7 +162,7 @@ else
 fi
 
 echo ""
-echo -e -n "${PU}Do you want to install he Vimix grub theme (y/n)?${NC}"
+echo -e -n "${PU}Do you want to install he Vimix grub theme (y/n)?${NC} "
 read a3
 
 if [ "${a3}" = "" ] || [ "${a3}" = "y" ]; then
@@ -200,7 +200,7 @@ fi
 
 # Dunst notify icon--------------------------------------------------------------
 echo ""
-echo -e -n "${PU}Do you want to download <info.png> (recommended for Dunst notify icon) (y/n)?${NC}"
+echo -e -n "${PU}Do you want to download <info.png> (recommended for Dunst notify icon) (y/n)?${NC} "
 read a4
 if [ "${a4}" = "" ] || [ "${a5}" = "y" ]; then
     if [[ ! -d ~/images ]]; then
@@ -210,7 +210,7 @@ if [ "${a4}" = "" ] || [ "${a5}" = "y" ]; then
     curl -o ~/images/info.png https://upload.wikimedia.org/wikipedia/commons/e/e4/Infobox_info_icon.svg
 
     echo -e "${YE}Done${NC}"
-    echo -e -n "${YE}Press ${PU}enter${YE} to test it${NC}"
+    echo -e -n "${YE}Press ${PU}enter${YE} to test it${NC} "
     read aTest
     dunst &
     notify-send "This is a random notification :)"
@@ -220,7 +220,7 @@ fi
 
 # Wallpaper-----------------------------------------------------------------------
 echo ""
-echo -e -n "${PU}Do you want to set a wallpaper now (y/n)?${NC}"
+echo -e -n "${PU}Do you want to set a wallpaper now (y/n)?${NC} "
 read a5
 if [ "${a5}" = "" ] || [ "${a5}" = "y" ]; then
     if [[ ! -d ~/images ]]; then
