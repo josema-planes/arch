@@ -130,7 +130,7 @@ else
     break
 fi
 
-
+echo "\n"
 echo -e -n "${PU}Do you want to install he Breeze cursor theme (y/n)?${NC}"
 read a2
 
@@ -161,7 +161,7 @@ else
     break
 fi
 
-
+echo "\n"
 echo -e -n "${PU}Do you want to install he Vimix grub theme (y/n)?${NC}"
 read a3
 
@@ -178,6 +178,8 @@ if [ "${a3}" = "" ] || [ "${a3}" = "y" ]; then
         rm Vimix-1080p.tar.xz
         sudo mv Vimix-1080p/Vimix/ /boot/grub/themes/
         rm -r Vimix-1080p
+
+        cd ~
 
         sudo chmod 777 /etc/default/grub
         echo "GRUB_THEME='/boot/grub/themes/Vimix/theme.txt'" >> /etc/default/grub
@@ -196,7 +198,47 @@ else
     break
 fi
 
+# Dunst notify icon--------------------------------------------------------------
+echo "\n"
+echo -e -n "${PU}Do you want to download <info.png> (recommended for Dunst notify icon) (y/n)?${NC}"
+read a4
+if [ "${a4}" = "" ] || [ "${a5}" = "y" ]; then
+    if [[ ! -d ~/images ]]; then
+        mkdir ~/images
+    fi
 
+    curl -o ~/images/info.png https://upload.wikimedia.org/wikipedia/commons/e/e4/Infobox_info_icon.svg
+
+    echo "${YE}Done${NC}"
+    echo -e -n "${YE}Press ${PU}enter${YE} to test it${NC}"
+    read aTest
+    dunst &
+    notify-send "This is a nandom notification"
+else
+    break
+fi
+
+# Wallpaper-----------------------------------------------------------------------
+echo "\n"
+echo -e -n "${PU}Do you want to set a wallpaper now (y/n)?${NC}"
+read a5
+if [ "${a5}" = "" ] || [ "${a5}" = "y" ]; then
+    if [[ ! -d ~/images ]]; then
+        mkdir ~/images
+    fi
+
+    curl -o ~/images/wall1.jpg https://i.pinimg.com/originals/3b/8a/d2/3b8ad2c7b1be2caf24321c852103598a.jpg
+
+    echo "${YE}Now selec wallpaper and press 'Apply'${NC}"
+    nitrogen ~/images
+
+    echo "${YE}Done${NC}"
+else
+    break
+fi
+
+# Reboot-----------------------------------------------------------------
+echo "\n"
 echo -e -n "${YE}Setting up completed. Press ${PU}enter ${YE}to reboot now${NC} "
 read a0
 
