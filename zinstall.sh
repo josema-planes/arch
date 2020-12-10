@@ -15,7 +15,8 @@ sudo pacman -S --noconfirm --needed thunar nitrogen dmenu git brightnessctl pyth
 echo -e "${YE}Done${NC}"
 
 # Installing yay--------------------------------------------------------
-if [ ! -d ~/yay ]; then
+cmd=`whereis yay`
+if [[ $cmd != */* ]]; then
     echo -e "${PU}Installing yay...${NC}"
     sleep 1
     git clone https://aur.archlinux.org/yay.git
@@ -30,19 +31,20 @@ fi
 # Installing yay pakages------------------------------------------------
 cmd=`pacman -Qqm`
 if [[ $cmd != *vscodium-bin* ]]; then
-    echo -e "${YE}Installing yay pakages...${NC}"
-    sleep 1
-    yay -S --noconfirm vscodium-bin
+    a="vscodium-bin"
 fi
 if [[ $cmd != *nerd-fonts-ubuntu-mono* ]]; then
-    yay -S --noconfirm nerd-fonts-ubuntu-mono
+    b="nerd-fonts"
 fi
 if [[ $cmd != *ccat* ]]; then
-    yay -S --noconfirm ccat
+    c="ccat "
 fi
+pakages="$a $b $c"
+yay -S --noconfirm $pakages
 
 # Cloning repository and moving files
 echo -e "${YE}Cloning repository...${NC}"
+slep 1
 git clone https://github.com/josemapt/dotfiles.git
 
 echo -e "${YE}Relocating files...${NC}"
