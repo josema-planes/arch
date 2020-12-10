@@ -229,7 +229,8 @@ if [ "${a5}" = "" ] || [ "${a5}" = "y" ]; then
 
     curl -o ~/images/wall1.jpg https://i.pinimg.com/originals/3b/8a/d2/3b8ad2c7b1be2caf24321c852103598a.jpg
 
-    echo "${YE}Now selec wallpaper and press 'Apply'${NC}"
+    echo -e "${YE}Now selec wallpaper and press 'Apply'${NC}"
+    sleep 2
     nitrogen ~/images
 
     echo -e "${YE}Done${NC}"
