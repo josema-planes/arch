@@ -11,7 +11,7 @@ curl -O https://raw.githubusercontent.com/josemapt/dotfiles/main/zinstall.sh; ch
 <hr>
 <br>
 
-<img src="https://github.com/josemapt/dotfiles/blob/main/screenshots/qtile.jpg">
+<img src="https://github.com/josemapt/dotfiles_old/blob/main/screenshots/qtile.jpg">
 
 ***Quick Links***
   - [Qtile](https://github.com/josemapt/dotfiles/tree/main/.config/qtile)
